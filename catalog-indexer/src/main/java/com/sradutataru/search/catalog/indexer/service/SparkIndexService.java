@@ -1,6 +1,7 @@
 package com.sradutataru.search.catalog.indexer.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sradutataru.search.catalog.indexer.dto.ProductDto;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +13,8 @@ import org.apache.spark.sql.functions;
 import org.elasticsearch.action.admin.indices.alias.IndicesAliasesRequest;
 import org.elasticsearch.action.admin.indices.alias.get.GetAliasesRequest;
 import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.GetAliasesResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
@@ -23,11 +26,18 @@ import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import static java.lang.Boolean.TRUE;
+import static java.util.Arrays.asList;
 import static org.elasticsearch.client.RequestOptions.DEFAULT;
 import static org.elasticsearch.common.xcontent.XContentType.JSON;
 
@@ -42,6 +52,7 @@ public class SparkIndexService {
     private static final String LIVE = "_live";
     public static final String LIVE_ALIAS = CATALOG_INDEX + LIVE;
 
+    private final TagService tagService;
     private final SparkSession sparkSession;
     private final RestHighLevelClient restHighLevelClient;
     private final ObjectMapper objectMapper;
@@ -60,6 +71,7 @@ public class SparkIndexService {
             joinedDF = joinedDF.drop("brand", "category", "brand_id", "category_id");
             joinedDF = joinedDF.withColumn("search_keywords", functions.concat_ws(" ", joinedDF.col("name"), joinedDF.col("brand_name"), joinedDF.col("category_name")));
             joinedDF.write().format("org.elasticsearch.spark.sql").option("es.resource", PREVIEW_ALIAS + "/_doc").mode("append").save();
+            tagService.indexTags(joinedDF);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
@@ -80,6 +92,20 @@ public class SparkIndexService {
                     .id(productDto.getProductId())
                     .source(objectMapper.writeValueAsString(productDto), JSON);
             restHighLevelClient.index(indexRequest, DEFAULT);
+            List<Map<String, Object>> docs = new ArrayList<>();
+            if (productDto.getName() != null) {
+                docs.addAll(tagService.updateFieldSemanticTags("name", productDto.getName()));
+            }
+            if (productDto.getBrandName() != null) {
+                docs.addAll(tagService.updateFieldSemanticTags("brand_name", productDto.getBrandName()));
+            }
+            if (productDto.getCategoryName() != null) {
+                docs.addAll(tagService.updateFieldSemanticTags("category_name", productDto.getCategoryName()));
+            }
+            if (productDto.getAttributes() != null) {
+                docs.addAll(tagService.updateFieldSemanticTags("attributes", productDto.getAttributes()));
+            }
+            tagService.bulkIndexTags(docs);
             return productDto;
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error converting ProductDto to JSON", e);
@@ -117,6 +143,7 @@ public class SparkIndexService {
             throw new RuntimeException(e);
         }
     }
+
     private void cleanIndex() {
         try {
             DeleteByQueryRequest request = new DeleteByQueryRequest(PREVIEW_ALIAS);

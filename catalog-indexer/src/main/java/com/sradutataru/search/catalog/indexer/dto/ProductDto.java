@@ -47,7 +47,7 @@ public class ProductDto {
     private String searchKeywords;
 
     @Schema(description = "Additional attributes of the product", example = "{\"color\": \"black\", \"storage\": \"128GB\"}")
-    private Map<String, Object> attributes;
+    private Map<String, String> attributes;
 
     @NotNull(message = "Release date cannot be null")
     @Schema(description = "Release date of the product", example = "2023-09-12", type = "string", required = true)

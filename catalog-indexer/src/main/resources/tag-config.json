@@ -1,0 +1,21 @@
+{
+  "name": {
+    "concept": true,
+    "text": true,
+    "shingle": true
+  },
+  "brand_name": {
+    "concept": true,
+    "text": true,
+    "shingle": true
+  },
+  "category_name": {
+    "concept": true,
+    "text": false,
+    "shingle": false
+  },
+  "attributes": {
+    "concept": true,
+    "asMap": true
+  }
+}
