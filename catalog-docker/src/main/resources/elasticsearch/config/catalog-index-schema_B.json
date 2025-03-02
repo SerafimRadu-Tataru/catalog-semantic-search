@@ -2,6 +2,44 @@
   "aliases": {
     "catalog-index_preview": {}
   },
+  "settings": {
+    "analysis": {
+      "tokenizer": {
+        "edge_ngram_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20,
+          "token_chars": ["letter", "digit"]
+        },
+        "shingle_tokenizer": {
+          "type": "standard"
+        }
+      },
+      "filter": {
+        "shingle_filter": {
+          "type": "shingle",
+          "min_shingle_size": 2,
+          "max_shingle_size": 3,
+          "output_unigrams": true
+        }
+      },
+      "analyzer": {
+        "edge_ngram_analyzer": {
+          "type": "custom",
+          "tokenizer": "edge_ngram_tokenizer",
+          "filter": ["lowercase"]
+        },
+        "shingle_analyzer": {
+          "type": "custom",
+          "tokenizer": "shingle_tokenizer",
+          "filter": ["lowercase", "shingle_filter"]
+        },
+        "text_analyzer": {
+          "type": "standard"
+        }
+      }
+    }
+  },
   "mappings": {
     "dynamic_templates": [
       {
@@ -13,12 +51,44 @@
     ],
     "properties": {
       "product_id": { "type": "keyword" },
-      "name": { "type": "text", "analyzer": "standard" },
-      "brand": { "type": "keyword" },
-      "category": { "type": "keyword" },
+      "name": {
+        "type": "text",
+        "analyzer": "edge_ngram_analyzer",
+        "search_analyzer": "standard",
+        "fields": {
+          "text": { "type": "text", "analyzer": "text_analyzer" },
+          "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
+          "concept": { "type": "keyword" }
+        }
+      },
+      "brand_name": {
+        "type": "keyword",
+        "fields": {
+          "text": { "type": "text", "analyzer": "text_analyzer" },
+          "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
+          "concept": { "type": "keyword" }
+        }
+      },
+      "category_name": {
+        "type": "keyword",
+        "fields": {
+          "text": { "type": "text", "analyzer": "text_analyzer" },
+          "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
+          "concept": { "type": "keyword" }
+        }
+      },
       "price": { "type": "float" },
-      "description": { "type": "text", "analyzer": "standard" },
-      "search_keywords": { "type": "text", "analyzer": "standard" },
+      "description": { "type": "text", "analyzer": "text_analyzer" },
+      "search_keywords": {
+        "type": "text",
+        "analyzer": "edge_ngram_analyzer",
+        "search_analyzer": "standard",
+        "fields": {
+          "text": { "type": "text", "analyzer": "text_analyzer" },
+          "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
+          "concept": { "type": "keyword" }
+        }
+      },
       "attributes": { "type": "object", "dynamic": true },
       "releaseDate": { "type": "date" },
       "rating": { "type": "float" },

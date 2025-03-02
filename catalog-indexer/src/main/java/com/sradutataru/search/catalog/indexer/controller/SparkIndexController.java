@@ -14,22 +14,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/index")
 @RequiredArgsConstructor
-public class SparkIndexController {
+public class SparkIndexController implements SparkIndexControllerInterface {
 
     private final SparkIndexService service;
 
+    @Override
     @GetMapping
     public ResponseEntity<String> indexData() {
         service.indexAllDataAsync();
         return ResponseEntity.ok("Index cleaned and data indexing initiated.");
     }
 
+    @Override
     @PostMapping("/doc")
     public ResponseEntity<ProductDto> singleDoc(@RequestBody ProductDto productDto) {
         ProductDto indexedProduct = service.indexSingleDocument(productDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(indexedProduct);
     }
 
+    @Override
     @GetMapping("/swap")
     public ResponseEntity<String> swap() {
         service.swapCollections();

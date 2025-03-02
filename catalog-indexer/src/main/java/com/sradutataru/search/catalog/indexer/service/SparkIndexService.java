@@ -57,7 +57,7 @@ public class SparkIndexService {
             Dataset<Row> joinedDF = productsDF
                     .join(brandsDF, productsDF.col("brand").equalTo(brandsDF.col("brand_id")), "left")
                     .join(categoriesDF, productsDF.col("category").equalTo(categoriesDF.col("category_id")), "left");
-            joinedDF = joinedDF.drop("brand", "category");
+            joinedDF = joinedDF.drop("brand", "category", "brand_id", "category_id");
             joinedDF = joinedDF.withColumn("search_keywords", functions.concat_ws(" ", joinedDF.col("name"), joinedDF.col("brand_name"), joinedDF.col("category_name")));
             joinedDF.write().format("org.elasticsearch.spark.sql").option("es.resource", PREVIEW_ALIAS + "/_doc").mode("append").save();
         } catch (Exception e) {

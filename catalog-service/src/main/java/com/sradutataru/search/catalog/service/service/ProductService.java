@@ -3,6 +3,7 @@ package com.sradutataru.search.catalog.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sradutataru.search.catalog.service.dto.ProductDto;
+import com.sradutataru.search.catalog.service.dto.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -30,7 +31,7 @@ public class ProductService {
     private final RestHighLevelClient client;
     private final ObjectMapper objectMapper;
 
-    public List<ProductDto> semanticSearch(String query, Map<String, String> attributes) {
+    public ProductResponse semanticSearch(String query, Integer count, Integer page, Map<String, String> attributes) {
         List<ProductDto> products = new ArrayList<>();
         try {
             BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
@@ -43,40 +44,38 @@ public class ProductService {
                     );
 
             if (attributes != null && !attributes.isEmpty()) {
-                for (Map.Entry<String, String> entry : attributes.entrySet()) {
-                    String attributePath = "attributes." + entry.getKey();
-                    boolQuery.filter(QueryBuilders.termQuery(attributePath, entry.getValue()));
-                }
+                attributes.forEach((key, value) -> boolQuery.filter(QueryBuilders.termQuery(key, value)));
             }
 
             SearchSourceBuilder sourceBuilder = new SearchSourceBuilder()
                     .query(boolQuery)
-                    .size(20);
+                    .size(count)
+                    .from((page - 1) * count);
 
             SearchRequest searchRequest = new SearchRequest(INDEX);
             searchRequest.source(sourceBuilder);
 
             SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
 
-            // Parse search results into ProductDto list
+            long numFound = response.getHits().getTotalHits().value;
             for (SearchHit hit : response.getHits().getHits()) {
                 ProductDto product = objectMapper.readValue(hit.getSourceAsString(), ProductDto.class);
                 products.add(product);
             }
+            return new ProductResponse(query, numFound, attributes, products, count, page);
         } catch (IOException e) {
             throw new RuntimeException("Failed to perform semantic search", e);
         }
-        return products;
     }
 
     public List<String> typeaheadSearch(String query) {
         Set<String> suggestions = new HashSet<>();
         try {
-            BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
-                    .should(QueryBuilders.prefixQuery("name", query))
-                    .should(QueryBuilders.prefixQuery("description", query))
-                    .should(QueryBuilders.prefixQuery("searchKeywords", query));
-
+            String[] tokens = query.toLowerCase().split(" ");
+            BoolQueryBuilder boolQuery =
+                    QueryBuilders.boolQuery()
+                            .should(getPrefixPhraseForField(tokens, "name"))
+                            .should(getPrefixPhraseForField(tokens, "searchKeywords"));
             SearchSourceBuilder sourceBuilder = new SearchSourceBuilder()
                     .query(boolQuery)
                     .size(10);
@@ -96,5 +95,18 @@ public class ProductService {
             throw new RuntimeException("Failed to perform typeahead search", e);
         }
         return new ArrayList<>(suggestions);
+    }
+
+    private static BoolQueryBuilder getPrefixPhraseForField(String[] tokens, String field) {
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
+        if (tokens.length == 1) {
+            boolQuery.should(QueryBuilders.prefixQuery(field, tokens[0]));
+        } else {
+            for (int i = 0; i < tokens.length - 1; i++) {
+                boolQuery.must(QueryBuilders.matchQuery(field, tokens[i]));
+            }
+            boolQuery.must(QueryBuilders.prefixQuery(field, tokens[tokens.length - 1]));
+        }
+        return boolQuery;
     }
 }

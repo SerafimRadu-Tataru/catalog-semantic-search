@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: catalog-indexer
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   elasticsearch:
     host: localhost
     port: 9200

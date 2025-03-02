@@ -98,10 +98,16 @@ services:
       - ./src/main/resources/elasticsearch/config:/config
     command: >
       sh -c "sleep 10 &&
+      echo 'Deleting existing indices if they exist...' &&
+      curl -u elastic:ElasticRocks! -X DELETE 'http://elasticsearch:9200/catalog-index_a' &&
+      curl -u elastic:ElasticRocks! -X DELETE 'http://elasticsearch:9200/catalog-index_b' &&
+      curl -u elastic:ElasticRocks! -X DELETE 'http://elasticsearch:9200/semantic-tags' &&
       echo 'Creating index_A (live)...' &&
       curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/catalog-index_a?pretty' -H 'Content-Type: application/json' -d @/config/catalog-index-schema_A.json &&
       echo 'Creating index_B (preview)...' &&
-      curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/catalog-index_b?pretty' -H 'Content-Type: application/json' -d @/config/catalog-index-schema_B.json"
+      curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/catalog-index_b?pretty' -H 'Content-Type: application/json' -d @/config/catalog-index-schema_B.json &&
+      echo 'Creating semantic-tags index...' &&
+      curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/semantic-tags?pretty' -H 'Content-Type: application/json' -d @/config/semantic-tags-schema.json"
     networks:
       - elk-network
 volumes:
