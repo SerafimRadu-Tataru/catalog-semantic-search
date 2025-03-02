@@ -1,0 +1,29 @@
+{
+  "aliases": {
+    "catalog-index_live": {}
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "strings_as_keyword": {
+          "match_mapping_type": "string",
+          "mapping": { "type": "keyword" }
+        }
+      }
+    ],
+    "properties": {
+      "product_id": { "type": "keyword" },
+      "name": { "type": "text", "analyzer": "standard" },
+      "brand": { "type": "keyword" },
+      "category": { "type": "keyword" },
+      "price": { "type": "float" },
+      "description": { "type": "text", "analyzer": "standard" },
+      "search_keywords": { "type": "text", "analyzer": "standard" },
+      "attributes": { "type": "object", "dynamic": true },
+      "releaseDate": { "type": "date" },
+      "rating": { "type": "float" },
+      "stock": { "type": "integer" },
+      "tags": { "type": "keyword" }
+    }
+  }
+}

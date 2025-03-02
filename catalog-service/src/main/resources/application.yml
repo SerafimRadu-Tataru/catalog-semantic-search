@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+spring:
+  elasticsearch:
+    host: localhost
+    port: 9200
+    scheme: http
+    username: elastic
+    password: ElasticRocks!
+
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: rabbitmq
+    password: SolrRocks!
+
+logging:
+  level:
+    org.elasticsearch: DEBUG
+    com.sradutataru: ERROR

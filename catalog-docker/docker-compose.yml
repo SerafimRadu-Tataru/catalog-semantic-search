@@ -1,0 +1,112 @@
+version: '3'
+services:
+
+  elasticsearch:
+    image: elasticsearch:7.9.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=ElasticRocks!
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - ./src/main/resources/elasticsearch/elasticsearch-config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    networks:
+      - elk-network
+      - default
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.9.2
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    volumes:
+      - ./src/main/resources/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=SolrRocks!
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./src/main/resources/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - "7077:7077"
+      - "9090:8080"
+    volumes:
+      - ./src/main/resources/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ./src/main/resources/spark/spark-env.sh:/opt/bitnami/spark/conf/spark-env.sh
+
+  spark-worker1:
+    image: bitnami/spark:latest
+    container_name: spark-worker1
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./src/main/resources/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ./src/main/resources/spark/spark-env.sh:/opt/bitnami/spark/conf/spark-env.sh
+
+  spark-worker2:
+    image: bitnami/spark:latest
+    container_name: spark-worker2
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+    ports:
+      - "8082:8081"
+    volumes:
+      - ./src/main/resources/spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ./src/main/resources/spark/spark-env.sh:/opt/bitnami/spark/conf/spark-env.sh
+  es-init:
+    image: curlimages/curl:latest
+    container_name: es-init
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./src/main/resources/elasticsearch/config:/config
+    command: >
+      sh -c "sleep 10 &&
+      echo 'Creating index_A (live)...' &&
+      curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/catalog-index_a?pretty' -H 'Content-Type: application/json' -d @/config/catalog-index-schema_A.json &&
+      echo 'Creating index_B (preview)...' &&
+      curl -u elastic:ElasticRocks! -X PUT 'http://elasticsearch:9200/catalog-index_b?pretty' -H 'Content-Type: application/json' -d @/config/catalog-index-schema_B.json"
+    networks:
+      - elk-network
+volumes:
+  esdata:
+
+networks:
+  elk-network:
+    driver: bridge

@@ -1,0 +1,4406 @@
+[
+  {
+    "product_id": "p001",
+    "name": "Apple iPhone 13 Pro",
+    "brand": "Apple Inc.",
+    "category": "Smartphones",
+    "price": 999.99,
+    "description": "The iPhone 13 Pro offers advanced camera systems and powerful A15 Bionic chip.",
+    "search_keywords": "iphone13 pro smartphone apple",
+    "attributes": {
+      "color": "Graphite",
+      "storage": "256GB",
+      "battery": "3095mAh"
+    },
+    "releaseDate": "2023-01-01",
+    "rating": 4.7,
+    "stock": 150,
+    "tags": [
+      "smartphone",
+      "ios",
+      "apple"
+    ]
+  },
+  {
+    "product_id": "p002",
+    "name": "Samsung Galaxy S21 Ultra",
+    "brand": "Samsung Electronics",
+    "category": "Smartphones",
+    "price": 1199.99,
+    "description": "The Galaxy S21 Ultra features a 108MP camera and Exynos 2100 processor.",
+    "search_keywords": "galaxy s21 ultra samsung smartphone",
+    "attributes": {
+      "color": "Phantom Black",
+      "storage": "512GB",
+      "battery": "5000mAh"
+    },
+    "releaseDate": "2023-01-02",
+    "rating": 4.6,
+    "stock": 200,
+    "tags": [
+      "smartphone",
+      "android",
+      "samsung"
+    ]
+  },
+  {
+    "product_id": "p003",
+    "name": "Sony WH-1000XM4 Headphones",
+    "brand": "Sony Corporation",
+    "category": "Headphones",
+    "price": 349.99,
+    "description": "Industry-leading noise canceling with Dual Noise Sensor technology.",
+    "search_keywords": "sony wh-1000xm4 headphones noise-canceling",
+    "attributes": {
+      "color": "Black",
+      "type": "Over-ear",
+      "battery": "30 hours"
+    },
+    "releaseDate": "2023-01-03",
+    "rating": 4.8,
+    "stock": 120,
+    "tags": [
+      "audio",
+      "headphones",
+      "sony"
+    ]
+  },
+  {
+    "product_id": "p004",
+    "name": "Dell XPS 13 Laptop",
+    "brand": "Dell Inc.",
+    "category": "Laptops",
+    "price": 1299.99,
+    "description": "Compact 13-inch laptop with InfinityEdge display and Intel Core i7.",
+    "search_keywords": "dell xps 13 laptop intel",
+    "attributes": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    },
+    "releaseDate": "2023-01-04",
+    "rating": 4.5,
+    "stock": 80,
+    "tags": [
+      "laptop",
+      "dell",
+      "windows"
+    ]
+  },
+  {
+    "product_id": "p005",
+    "name": "Apple MacBook Pro 14-inch",
+    "brand": "Apple Inc.",
+    "category": "Laptops",
+    "price": 1999.99,
+    "description": "MacBook Pro with M1 Pro chip and Liquid Retina XDR display.",
+    "search_keywords": "macbook pro apple m1",
+    "attributes": {
+      "processor": "M1 Pro",
+      "ram": "16GB",
+      "storage": "1TB SSD"
+    },
+    "releaseDate": "2023-01-05",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "laptop",
+      "apple",
+      "macos"
+    ]
+  },
+  {
+    "product_id": "p006",
+    "name": "Sony A7 III Mirrorless Camera",
+    "brand": "Sony Corporation",
+    "category": "Cameras",
+    "price": 1999.99,
+    "description": "Full-frame mirrorless camera with 24.2MP and 4K video.",
+    "search_keywords": "sony a7 iii camera mirrorless",
+    "attributes": {
+      "sensor": "Full-frame",
+      "megapixels": "24.2",
+      "video": "4K"
+    },
+    "releaseDate": "2023-01-06",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "camera",
+      "sony",
+      "photography"
+    ]
+  },
+  {
+    "product_id": "p007",
+    "name": "Bose QuietComfort 45",
+    "brand": "Bose Corporation",
+    "category": "Headphones",
+    "price": 329.99,
+    "description": "Noise-canceling headphones with 24-hour battery life.",
+    "search_keywords": "bose quietcomfort headphones noise-canceling",
+    "attributes": {
+      "color": "White",
+      "type": "Over-ear",
+      "battery": "24 hours"
+    },
+    "releaseDate": "2023-01-07",
+    "rating": 4.6,
+    "stock": 130,
+    "tags": [
+      "audio",
+      "headphones",
+      "bose"
+    ]
+  },
+  {
+    "product_id": "p008",
+    "name": "Logitech MX Master 3",
+    "brand": "Logitech",
+    "category": "Accessories",
+    "price": 99.99,
+    "description": "Advanced wireless mouse with hyper-fast scrolling.",
+    "search_keywords": "logitech mx master mouse wireless",
+    "attributes": {
+      "dpi": "4000",
+      "buttons": "7",
+      "connectivity": "Bluetooth"
+    },
+    "releaseDate": "2023-01-08",
+    "rating": 4.7,
+    "stock": 200,
+    "tags": [
+      "accessories",
+      "mouse",
+      "logitech"
+    ]
+  },
+  {
+    "product_id": "p009",
+    "name": "Canon EOS R6 Mirrorless Camera",
+    "brand": "Canon Inc.",
+    "category": "Cameras",
+    "price": 2499.99,
+    "description": "Advanced mirrorless camera with full-frame sensor and 4K video.",
+    "search_keywords": "canon eos r6 camera mirrorless",
+    "attributes": {
+      "sensor": "Full-frame",
+      "megapixels": "20.1",
+      "video": "4K"
+    },
+    "releaseDate": "2023-01-09",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "camera",
+      "canon",
+      "photography"
+    ]
+  },
+  {
+    "product_id": "p010",
+    "name": "GoPro HERO10 Black",
+    "brand": "GoPro Inc.",
+    "category": "Cameras",
+    "price": 499.99,
+    "description": "Action camera with 5.3K video recording and 23MP photos.",
+    "search_keywords": "gopro hero10 action camera",
+    "attributes": {
+      "resolution": "23MP",
+      "video": "5.3K",
+      "waterproof": "10m"
+    },
+    "releaseDate": "2023-01-10",
+    "rating": 4.7,
+    "stock": 100,
+    "tags": [
+      "action",
+      "camera",
+      "gopro"
+    ]
+  },
+  {
+    "product_id": "p011",
+    "name": "Apple iPad Pro 11-inch",
+    "brand": "Apple Inc.",
+    "category": "Tablets",
+    "price": 899.99,
+    "description": "iPad Pro with M1 chip and Liquid Retina display.",
+    "search_keywords": "ipad pro tablet apple",
+    "attributes": {
+      "storage": "256GB",
+      "processor": "M1",
+      "display": "Liquid Retina"
+    },
+    "releaseDate": "2023-01-11",
+    "rating": 4.9,
+    "stock": 120,
+    "tags": [
+      "tablet",
+      "apple",
+      "ipad"
+    ]
+  },
+  {
+    "product_id": "p012",
+    "name": "Microsoft Surface Pro 8",
+    "brand": "Microsoft Corporation",
+    "category": "Tablets",
+    "price": 1099.99,
+    "description": "2-in-1 device with Intel Evo platform and Windows 11.",
+    "search_keywords": "surface pro tablet microsoft",
+    "attributes": {
+      "storage": "512GB",
+      "processor": "Intel i7",
+      "os": "Windows 11"
+    },
+    "releaseDate": "2023-01-12",
+    "rating": 4.6,
+    "stock": 90,
+    "tags": [
+      "tablet",
+      "microsoft",
+      "windows"
+    ]
+  },
+  {
+    "product_id": "p013",
+    "name": "Sony PlayStation 5",
+    "brand": "Sony Corporation",
+    "category": "Gaming Consoles",
+    "price": 499.99,
+    "description": "Next-gen console with ultra-fast SSD and ray tracing.",
+    "search_keywords": "playstation 5 console sony",
+    "attributes": {
+      "storage": "825GB",
+      "video": "4K",
+      "cpu": "Custom AMD"
+    },
+    "releaseDate": "2023-01-13",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "gaming",
+      "console",
+      "sony"
+    ]
+  },
+  {
+    "product_id": "p014",
+    "name": "Xbox Series X",
+    "brand": "Microsoft Corporation",
+    "category": "Gaming Consoles",
+    "price": 499.99,
+    "description": "Powerful console with 12 teraflops and 1TB SSD.",
+    "search_keywords": "xbox series x console microsoft",
+    "attributes": {
+      "storage": "1TB",
+      "video": "4K",
+      "cpu": "Custom AMD"
+    },
+    "releaseDate": "2023-01-14",
+    "rating": 4.7,
+    "stock": 60,
+    "tags": [
+      "gaming",
+      "console",
+      "microsoft"
+    ]
+  },
+  {
+    "product_id": "p015",
+    "name": "Nikon Z6 II Mirrorless Camera",
+    "brand": "Nikon Corporation",
+    "category": "Cameras",
+    "price": 1999.99,
+    "description": "Full-frame mirrorless camera with 24.5MP and dual processors.",
+    "search_keywords": "nikon z6 ii camera mirrorless",
+    "attributes": {
+      "sensor": "Full-frame",
+      "megapixels": "24.5",
+      "video": "4K"
+    },
+    "releaseDate": "2023-01-15",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "camera",
+      "nikon",
+      "photography"
+    ]
+  },
+  {
+    "product_id": "p016",
+    "name": "LG OLED C1 55-inch TV",
+    "brand": "LG Electronics",
+    "category": "Televisions",
+    "price": 1299.99,
+    "description": "4K OLED TV with Dolby Vision and AI Picture Pro.",
+    "search_keywords": "lg oled c1 tv 55-inch",
+    "attributes": {
+      "resolution": "4K",
+      "panel": "OLED",
+      "size": "55-inch"
+    },
+    "releaseDate": "2023-01-16",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "tv",
+      "oled",
+      "lg"
+    ]
+  },
+  {
+    "product_id": "p017",
+    "name": "Samsung QN90A Neo QLED 65-inch",
+    "brand": "Samsung Electronics",
+    "category": "Televisions",
+    "price": 1799.99,
+    "description": "Quantum Matrix technology for brilliant 4K picture.",
+    "search_keywords": "samsung qn90a tv qled 65-inch",
+    "attributes": {
+      "resolution": "4K",
+      "panel": "QLED",
+      "size": "65-inch"
+    },
+    "releaseDate": "2023-01-17",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "tv",
+      "qled",
+      "samsung"
+    ]
+  },
+  {
+    "product_id": "p018",
+    "name": "Apple Watch Series 7",
+    "brand": "Apple Inc.",
+    "category": "Smartwatches",
+    "price": 399.99,
+    "description": "Smartwatch with always-on Retina display and ECG app.",
+    "search_keywords": "apple watch series 7 smartwatch",
+    "attributes": {
+      "display": "Retina",
+      "battery": "18 hours",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-01-18",
+    "rating": 4.8,
+    "stock": 150,
+    "tags": [
+      "smartwatch",
+      "apple",
+      "wearable"
+    ]
+  },
+  {
+    "product_id": "p019",
+    "name": "Garmin Fenix 6 Pro",
+    "brand": "Garmin Ltd.",
+    "category": "Smartwatches",
+    "price": 699.99,
+    "description": "Rugged smartwatch with GPS and advanced training metrics.",
+    "search_keywords": "garmin fenix 6 pro smartwatch",
+    "attributes": {
+      "battery": "36 hours",
+      "gps": "Yes",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-01-19",
+    "rating": 4.7,
+    "stock": 110,
+    "tags": [
+      "smartwatch",
+      "garmin",
+      "outdoor"
+    ]
+  },
+  {
+    "product_id": "p020",
+    "name": "Bose SoundLink Revolve+ II",
+    "brand": "Bose Corporation",
+    "category": "Speakers",
+    "price": 329.99,
+    "description": "Portable Bluetooth speaker with 360-degree sound.",
+    "search_keywords": "bose soundlink revolve speaker bluetooth",
+    "attributes": {
+      "battery": "17 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-01-20",
+    "rating": 4.6,
+    "stock": 90,
+    "tags": [
+      "speaker",
+      "bose",
+      "audio"
+    ]
+  },
+  {
+    "product_id": "p021",
+    "name": "JBL Charge 5",
+    "brand": "JBL",
+    "category": "Speakers",
+    "price": 179.99,
+    "description": "Waterproof Bluetooth speaker with 20-hour battery life.",
+    "search_keywords": "jbl charge 5 speaker bluetooth",
+    "attributes": {
+      "battery": "20 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "IP67"
+    },
+    "releaseDate": "2023-01-21",
+    "rating": 4.7,
+    "stock": 130,
+    "tags": [
+      "speaker",
+      "jbl",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p022",
+    "name": "Sony WF-1000XM4 Wireless Earbuds",
+    "brand": "Sony Corporation",
+    "category": "Headphones",
+    "price": 279.99,
+    "description": "True wireless earbuds with industry-leading noise canceling.",
+    "search_keywords": "sony wf-1000xm4 earbuds wireless noise-canceling",
+    "attributes": {
+      "battery": "8 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "IPX4"
+    },
+    "releaseDate": "2023-01-22",
+    "rating": 4.8,
+    "stock": 140,
+    "tags": [
+      "earbuds",
+      "sony",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p023",
+    "name": "Beats Studio3 Wireless Headphones",
+    "brand": "Beats Electronics",
+    "category": "Headphones",
+    "price": 349.99,
+    "description": "Over-ear headphones with pure adaptive noise canceling.",
+    "search_keywords": "beats studio3 headphones wireless",
+    "attributes": {
+      "battery": "22 hours",
+      "connectivity": "Bluetooth",
+      "color": "Matte Black"
+    },
+    "releaseDate": "2023-01-23",
+    "rating": 4.5,
+    "stock": 90,
+    "tags": [
+      "headphones",
+      "beats",
+      "audio"
+    ]
+  },
+  {
+    "product_id": "p024",
+    "name": "Amazon Echo Dot (4th Gen)",
+    "brand": "Amazon",
+    "category": "Smart Home Devices",
+    "price": 49.99,
+    "description": "Smart speaker with Alexa voice control and improved sound.",
+    "search_keywords": "echo dot alexa smart speaker",
+    "attributes": {
+      "connectivity": "Wi-Fi",
+      "voice_control": "Alexa",
+      "color": "Charcoal"
+    },
+    "releaseDate": "2023-01-24",
+    "rating": 4.6,
+    "stock": 200,
+    "tags": [
+      "smart home",
+      "alexa",
+      "speaker"
+    ]
+  },
+  {
+    "product_id": "p025",
+    "name": "Philips Hue White and Color Ambiance",
+    "brand": "Philips",
+    "category": "Smart Home Devices",
+    "price": 199.99,
+    "description": "Smart LED bulb with 16 million colors and app control.",
+    "search_keywords": "philips hue smart led bulb",
+    "attributes": {
+      "color": "Multicolor",
+      "connectivity": "Wi-Fi",
+      "voice_control": "Yes"
+    },
+    "releaseDate": "2023-01-25",
+    "rating": 4.7,
+    "stock": 180,
+    "tags": [
+      "smart home",
+      "lighting",
+      "philips"
+    ]
+  },
+  {
+    "product_id": "p026",
+    "name": "Ring Video Doorbell 3",
+    "brand": "Ring",
+    "category": "Smart Home Devices",
+    "price": 179.99,
+    "description": "Video doorbell with 1080p HD video and two-way talk.",
+    "search_keywords": "ring video doorbell smart home",
+    "attributes": {
+      "resolution": "1080p",
+      "connectivity": "Wi-Fi",
+      "power": "Battery"
+    },
+    "releaseDate": "2023-01-26",
+    "rating": 4.5,
+    "stock": 150,
+    "tags": [
+      "security",
+      "smart home",
+      "doorbell"
+    ]
+  },
+  {
+    "product_id": "p027",
+    "name": "Roku Streaming Stick 4K",
+    "brand": "Roku",
+    "category": "Streaming Devices",
+    "price": 49.99,
+    "description": "4K streaming with Dolby Vision and a simple remote.",
+    "search_keywords": "roku streaming stick 4k",
+    "attributes": {
+      "resolution": "4K",
+      "connectivity": "Wi-Fi",
+      "voice_control": "Yes"
+    },
+    "releaseDate": "2023-01-27",
+    "rating": 4.6,
+    "stock": 130,
+    "tags": [
+      "streaming",
+      "4k",
+      "roku"
+    ]
+  },
+  {
+    "product_id": "p028",
+    "name": "Google Chromecast with Google TV",
+    "brand": "Google",
+    "category": "Streaming Devices",
+    "price": 59.99,
+    "description": "Stream in 4K HDR with Google TV and voice remote.",
+    "search_keywords": "chromecast google tv streaming",
+    "attributes": {
+      "resolution": "4K",
+      "connectivity": "Wi-Fi",
+      "voice_control": "Google Assistant"
+    },
+    "releaseDate": "2023-01-28",
+    "rating": 4.7,
+    "stock": 150,
+    "tags": [
+      "streaming",
+      "google",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p029",
+    "name": "Fitbit Charge 5",
+    "brand": "Fitbit",
+    "category": "Fitness Equipment",
+    "price": 179.99,
+    "description": "Fitness tracker with built-in GPS and stress management.",
+    "search_keywords": "fitbit charge 5 fitness tracker",
+    "attributes": {
+      "battery": "7 days",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-01-29",
+    "rating": 4.6,
+    "stock": 120,
+    "tags": [
+      "fitness",
+      "tracker",
+      "fitbit"
+    ]
+  },
+  {
+    "product_id": "p030",
+    "name": "Garmin Forerunner 245 Music",
+    "brand": "Garmin Ltd.",
+    "category": "Fitness Equipment",
+    "price": 299.99,
+    "description": "GPS running smartwatch with music storage and advanced training features.",
+    "search_keywords": "garmin forerunner 245 music fitness watch",
+    "attributes": {
+      "battery": "7 days",
+      "connectivity": "Bluetooth",
+      "gps": "Yes"
+    },
+    "releaseDate": "2023-01-30",
+    "rating": 4.7,
+    "stock": 140,
+    "tags": [
+      "fitness",
+      "smartwatch",
+      "garmin"
+    ]
+  },
+  {
+    "product_id": "p031",
+    "name": "Samsung Galaxy Watch 4",
+    "brand": "Samsung Electronics",
+    "category": "Smartwatches",
+    "price": 249.99,
+    "description": "Smartwatch with body composition analysis and Wear OS.",
+    "search_keywords": "galaxy watch 4 samsung smartwatch",
+    "attributes": {
+      "battery": "40 hours",
+      "connectivity": "Bluetooth",
+      "os": "Wear OS"
+    },
+    "releaseDate": "2023-01-31",
+    "rating": 4.5,
+    "stock": 110,
+    "tags": [
+      "smartwatch",
+      "android",
+      "samsung"
+    ]
+  },
+  {
+    "product_id": "p032",
+    "name": "Apple AirPods Pro (2nd Generation)",
+    "brand": "Apple Inc.",
+    "category": "Headphones",
+    "price": 249.99,
+    "description": "Active noise-canceling earbuds with spatial audio.",
+    "search_keywords": "airpods pro apple headphones wireless",
+    "attributes": {
+      "battery": "6 hours",
+      "connectivity": "Bluetooth",
+      "noise_canceling": "Yes"
+    },
+    "releaseDate": "2023-02-01",
+    "rating": 4.8,
+    "stock": 130,
+    "tags": [
+      "earbuds",
+      "apple",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p033",
+    "name": "Microsoft Xbox Elite Wireless Controller Series 2",
+    "brand": "Microsoft Corporation",
+    "category": "Accessories",
+    "price": 179.99,
+    "description": "Customizable controller with adjustable tension thumbsticks.",
+    "search_keywords": "xbox elite controller series 2 microsoft",
+    "attributes": {
+      "connectivity": "Bluetooth",
+      "battery": "40 hours",
+      "customizable": "Yes"
+    },
+    "releaseDate": "2023-02-02",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "gaming",
+      "controller",
+      "xbox"
+    ]
+  },
+  {
+    "product_id": "p034",
+    "name": "Nintendo Switch OLED Model",
+    "brand": "Nintendo",
+    "category": "Gaming Consoles",
+    "price": 349.99,
+    "description": "Hybrid console with 7-inch OLED screen and enhanced audio.",
+    "search_keywords": "nintendo switch oled console",
+    "attributes": {
+      "storage": "64GB",
+      "video": "1080p",
+      "battery": "9 hours"
+    },
+    "releaseDate": "2023-02-03",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "gaming",
+      "nintendo",
+      "console"
+    ]
+  },
+  {
+    "product_id": "p035",
+    "name": "Canon PIXMA G6020 MegaTank Printer",
+    "brand": "Canon Inc.",
+    "category": "Printers",
+    "price": 279.99,
+    "description": "All-in-one printer with refillable ink tanks and wireless printing.",
+    "search_keywords": "canon pixma g6020 printer wireless",
+    "attributes": {
+      "connectivity": "Wi-Fi",
+      "print_technology": "Inkjet",
+      "refillable": "Yes"
+    },
+    "releaseDate": "2023-02-04",
+    "rating": 4.6,
+    "stock": 80,
+    "tags": [
+      "printer",
+      "canon",
+      "inkjet"
+    ]
+  },
+  {
+    "product_id": "p036",
+    "name": "HP Envy 6055 Wireless All-in-One Printer",
+    "brand": "HP Inc.",
+    "category": "Printers",
+    "price": 149.99,
+    "description": "Wireless all-in-one printer for home use with mobile printing.",
+    "search_keywords": "hp envy 6055 printer wireless",
+    "attributes": {
+      "connectivity": "Wi-Fi",
+      "print_technology": "Inkjet",
+      "mobile_printing": "Yes"
+    },
+    "releaseDate": "2023-02-05",
+    "rating": 4.5,
+    "stock": 90,
+    "tags": [
+      "printer",
+      "hp",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p037",
+    "name": "LG 34GP83A-B UltraGear Curved Gaming Monitor",
+    "brand": "LG Electronics",
+    "category": "Monitors",
+    "price": 699.99,
+    "description": "Ultra-wide QHD gaming monitor with 1ms response time.",
+    "search_keywords": "lg ultragear gaming monitor curved",
+    "attributes": {
+      "resolution": "QHD",
+      "refresh_rate": "144Hz",
+      "size": "34-inch"
+    },
+    "releaseDate": "2023-02-06",
+    "rating": 4.7,
+    "stock": 60,
+    "tags": [
+      "monitor",
+      "gaming",
+      "lg"
+    ]
+  },
+  {
+    "product_id": "p038",
+    "name": "Dell UltraSharp U2720Q 27-inch 4K Monitor",
+    "brand": "Dell Inc.",
+    "category": "Monitors",
+    "price": 649.99,
+    "description": "4K UHD monitor with USB-C connectivity and IPS technology.",
+    "search_keywords": "dell ultrasharp u2720q 4k monitor",
+    "attributes": {
+      "resolution": "4K",
+      "connectivity": "USB-C",
+      "panel": "IPS"
+    },
+    "releaseDate": "2023-02-07",
+    "rating": 4.6,
+    "stock": 70,
+    "tags": [
+      "monitor",
+      "dell",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p039",
+    "name": "Samsung Odyssey G7 Gaming Monitor",
+    "brand": "Samsung Electronics",
+    "category": "Monitors",
+    "price": 749.99,
+    "description": "32-inch QHD monitor with 240Hz refresh rate and HDR600.",
+    "search_keywords": "samsung odyssey g7 gaming monitor",
+    "attributes": {
+      "resolution": "QHD",
+      "refresh_rate": "240Hz",
+      "size": "32-inch"
+    },
+    "releaseDate": "2023-02-08",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "monitor",
+      "gaming",
+      "samsung"
+    ]
+  },
+  {
+    "product_id": "p040",
+    "name": "Corsair K95 RGB Platinum XT Mechanical Gaming Keyboard",
+    "brand": "Corsair Gaming",
+    "category": "Accessories",
+    "price": 199.99,
+    "description": "Mechanical keyboard with per-key RGB lighting and macro support.",
+    "search_keywords": "corsair k95 keyboard mechanical gaming",
+    "attributes": {
+      "switch_type": "Cherry MX",
+      "connectivity": "Wired",
+      "macro_keys": "6"
+    },
+    "releaseDate": "2023-02-09",
+    "rating": 4.8,
+    "stock": 100,
+    "tags": [
+      "keyboard",
+      "gaming",
+      "corsair"
+    ]
+  },
+  {
+    "product_id": "p041",
+    "name": "Razer DeathAdder V2 Gaming Mouse",
+    "brand": "Razer Inc.",
+    "category": "Accessories",
+    "price": 69.99,
+    "description": "Ergonomic gaming mouse with optical switches and 20K DPI sensor.",
+    "search_keywords": "razer deathadder v2 mouse gaming",
+    "attributes": {
+      "dpi": "20000",
+      "connectivity": "Wired",
+      "buttons": "8"
+    },
+    "releaseDate": "2023-02-10",
+    "rating": 4.7,
+    "stock": 120,
+    "tags": [
+      "mouse",
+      "gaming",
+      "razer"
+    ]
+  },
+  {
+    "product_id": "p042",
+    "name": "Asus ROG Strix XG27UQ Gaming Monitor",
+    "brand": "ASUSTek Computer Inc.",
+    "category": "Monitors",
+    "price": 899.99,
+    "description": "27-inch 4K UHD monitor with HDR400 and 144Hz refresh rate.",
+    "search_keywords": "asus rog strix 4k monitor gaming",
+    "attributes": {
+      "resolution": "4K",
+      "refresh_rate": "144Hz",
+      "panel": "IPS"
+    },
+    "releaseDate": "2023-02-11",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "monitor",
+      "gaming",
+      "asus"
+    ]
+  },
+  {
+    "product_id": "p043",
+    "name": "SteelSeries Arctis 7 Wireless Gaming Headset",
+    "brand": "SteelSeries",
+    "category": "Headphones",
+    "price": 149.99,
+    "description": "Wireless gaming headset with DTS surround sound.",
+    "search_keywords": "steelseries arctis 7 headset wireless",
+    "attributes": {
+      "battery": "24 hours",
+      "connectivity": "Wireless",
+      "surround_sound": "DTS"
+    },
+    "releaseDate": "2023-02-12",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "headset",
+      "gaming",
+      "steelseries"
+    ]
+  },
+  {
+    "product_id": "p044",
+    "name": "HyperX Cloud II Gaming Headset",
+    "brand": "HyperX",
+    "category": "Headphones",
+    "price": 99.99,
+    "description": "Comfortable gaming headset with virtual 7.1 surround sound.",
+    "search_keywords": "hyperx cloud ii headset gaming",
+    "attributes": {
+      "connectivity": "Wired",
+      "surround_sound": "7.1",
+      "microphone": "Detachable"
+    },
+    "releaseDate": "2023-02-13",
+    "rating": 4.6,
+    "stock": 110,
+    "tags": [
+      "headset",
+      "gaming",
+      "hyperx"
+    ]
+  },
+  {
+    "product_id": "p045",
+    "name": "AMD Ryzen 9 5900X Processor",
+    "brand": "AMD",
+    "category": "Components",
+    "price": 549.99,
+    "description": "12-core CPU with PCIe 4.0 support for high-performance gaming.",
+    "search_keywords": "amd ryzen 9 5900x processor",
+    "attributes": {
+      "cores": "12",
+      "threads": "24",
+      "base_clock": "3.7GHz"
+    },
+    "releaseDate": "2023-02-14",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "cpu",
+      "amd",
+      "components"
+    ]
+  },
+  {
+    "product_id": "p046",
+    "name": "Intel Core i9-11900K Processor",
+    "brand": "Intel Corporation",
+    "category": "Components",
+    "price": 529.99,
+    "description": "8-core CPU with Intel Turbo Boost Max 3.0 technology.",
+    "search_keywords": "intel core i9 11900k processor",
+    "attributes": {
+      "cores": "8",
+      "threads": "16",
+      "base_clock": "3.5GHz"
+    },
+    "releaseDate": "2023-02-15",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "cpu",
+      "intel",
+      "components"
+    ]
+  },
+  {
+    "product_id": "p047",
+    "name": "NVIDIA GeForce RTX 3080 Graphics Card",
+    "brand": "NVIDIA Corporation",
+    "category": "Components",
+    "price": 799.99,
+    "description": "High-end GPU with 10GB GDDR6X memory for 4K gaming.",
+    "search_keywords": "nvidia rtx 3080 graphics card",
+    "attributes": {
+      "memory": "10GB",
+      "cuda_cores": "8704",
+      "ray_tracing": "Yes"
+    },
+    "releaseDate": "2023-02-16",
+    "rating": 4.9,
+    "stock": 50,
+    "tags": [
+      "gpu",
+      "nvidia",
+      "components"
+    ]
+  },
+  {
+    "product_id": "p048",
+    "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
+    "brand": "Samsung Electronics",
+    "category": "Storage",
+    "price": 149.99,
+    "description": "NVMe M.2 SSD with read speeds up to 3500MB/s.",
+    "search_keywords": "samsung 970 evo plus ssd nvme",
+    "attributes": {
+      "capacity": "1TB",
+      "interface": "NVMe M.2",
+      "read_speed": "3500MB/s"
+    },
+    "releaseDate": "2023-02-17",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "ssd",
+      "storage",
+      "samsung"
+    ]
+  },
+  {
+    "product_id": "p049",
+    "name": "Western Digital Black SN850 2TB NVMe SSD",
+    "brand": "Western Digital",
+    "category": "Storage",
+    "price": 299.99,
+    "description": "High-performance NVMe SSD with PCIe Gen4 support.",
+    "search_keywords": "wd black sn850 ssd nvme",
+    "attributes": {
+      "capacity": "2TB",
+      "interface": "NVMe M.2",
+      "read_speed": "7000MB/s"
+    },
+    "releaseDate": "2023-02-18",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "ssd",
+      "storage",
+      "western digital"
+    ]
+  },
+  {
+    "product_id": "p050",
+    "name": "Seagate FireCuda 530 1TB NVMe SSD",
+    "brand": "Seagate Technology",
+    "category": "Storage",
+    "price": 199.99,
+    "description": "Gaming SSD with PCIe Gen4 and data recovery services.",
+    "search_keywords": "seagate firecuda 530 ssd nvme",
+    "attributes": {
+      "capacity": "1TB",
+      "interface": "NVMe M.2",
+      "read_speed": "7300MB/s"
+    },
+    "releaseDate": "2023-02-19",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "ssd",
+      "storage",
+      "seagate"
+    ]
+  },
+  {
+    "product_id": "p051",
+    "name": "Crucial MX500 1TB 2.5-inch SSD",
+    "brand": "Crucial",
+    "category": "Storage",
+    "price": 99.99,
+    "description": "SATA SSD with integrated power loss immunity.",
+    "search_keywords": "crucial mx500 ssd sata",
+    "attributes": {
+      "capacity": "1TB",
+      "interface": "SATA",
+      "read_speed": "560MB/s"
+    },
+    "releaseDate": "2023-02-20",
+    "rating": 4.7,
+    "stock": 110,
+    "tags": [
+      "ssd",
+      "storage",
+      "crucial"
+    ]
+  },
+  {
+    "product_id": "p052",
+    "name": "G.Skill Trident Z Neo 32GB DDR4 RAM",
+    "brand": "G.Skill",
+    "category": "Memory",
+    "price": 199.99,
+    "description": "High-performance DDR4 memory optimized for AMD Ryzen.",
+    "search_keywords": "gskill trident z neo ram ddr4",
+    "attributes": {
+      "capacity": "32GB",
+      "speed": "3600MHz",
+      "type": "DDR4"
+    },
+    "releaseDate": "2023-02-21",
+    "rating": 4.9,
+    "stock": 90,
+    "tags": [
+      "ram",
+      "memory",
+      "gskill"
+    ]
+  },
+  {
+    "product_id": "p053",
+    "name": "Corsair Vengeance LPX 16GB DDR4 RAM",
+    "brand": "Corsair",
+    "category": "Memory",
+    "price": 89.99,
+    "description": "Low-profile RAM designed for high-performance overclocking.",
+    "search_keywords": "corsair vengeance lpx ram ddr4",
+    "attributes": {
+      "capacity": "16GB",
+      "speed": "3200MHz",
+      "type": "DDR4"
+    },
+    "releaseDate": "2023-02-22",
+    "rating": 4.8,
+    "stock": 120,
+    "tags": [
+      "ram",
+      "memory",
+      "corsair"
+    ]
+  },
+  {
+    "product_id": "p054",
+    "name": "Kingston FURY Beast 16GB DDR5 RAM",
+    "brand": "Kingston",
+    "category": "Memory",
+    "price": 129.99,
+    "description": "DDR5 memory for high-end gaming and content creation.",
+    "search_keywords": "kingston fury beast ram ddr5",
+    "attributes": {
+      "capacity": "16GB",
+      "speed": "5200MHz",
+      "type": "DDR5"
+    },
+    "releaseDate": "2023-02-23",
+    "rating": 4.9,
+    "stock": 90,
+    "tags": [
+      "ram",
+      "memory",
+      "kingston"
+    ]
+  },
+  {
+    "product_id": "p055",
+    "name": "ASUS ROG Thor 850W Platinum Power Supply",
+    "brand": "ASUS",
+    "category": "Power Supplies",
+    "price": 229.99,
+    "description": "850W PSU with OLED power display and 0dB cooling.",
+    "search_keywords": "asus rog thor power supply 850w",
+    "attributes": {
+      "wattage": "850W",
+      "efficiency": "80 PLUS Platinum",
+      "modular": "Fully"
+    },
+    "releaseDate": "2023-02-24",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "psu",
+      "power supply",
+      "asus"
+    ]
+  },
+  {
+    "product_id": "p056",
+    "name": "EVGA SuperNOVA 750 G5 Power Supply",
+    "brand": "EVGA",
+    "category": "Power Supplies",
+    "price": 139.99,
+    "description": "750W fully modular PSU with 80 PLUS Gold efficiency.",
+    "search_keywords": "evga supernova power supply 750w",
+    "attributes": {
+      "wattage": "750W",
+      "efficiency": "80 PLUS Gold",
+      "modular": "Fully"
+    },
+    "releaseDate": "2023-02-25",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "psu",
+      "power supply",
+      "evga"
+    ]
+  },
+  {
+    "product_id": "p057",
+    "name": "NZXT H510 ATX Mid Tower Case",
+    "brand": "NZXT",
+    "category": "Cases",
+    "price": 89.99,
+    "description": "Minimalist ATX case with tempered glass and cable management.",
+    "search_keywords": "nzxt h510 case atx mid tower",
+    "attributes": {
+      "form_factor": "ATX",
+      "material": "Steel",
+      "tempered_glass": "Yes"
+    },
+    "releaseDate": "2023-02-26",
+    "rating": 4.8,
+    "stock": 100,
+    "tags": [
+      "case",
+      "nzxt",
+      "pc build"
+    ]
+  },
+  {
+    "product_id": "p058",
+    "name": "Fractal Design Meshify C ATX Mid Tower Case",
+    "brand": "Fractal Design",
+    "category": "Cases",
+    "price": 109.99,
+    "description": "High-airflow case with mesh front panel and modular design.",
+    "search_keywords": "fractal design meshify c case atx",
+    "attributes": {
+      "form_factor": "ATX",
+      "material": "Steel",
+      "airflow": "High"
+    },
+    "releaseDate": "2023-02-27",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "case",
+      "fractal",
+      "pc build"
+    ]
+  },
+  {
+    "product_id": "p059",
+    "name": "Noctua NH-D15 CPU Cooler",
+    "brand": "Noctua",
+    "category": "Cooling",
+    "price": 99.99,
+    "description": "Dual-tower CPU cooler with 6 heatpipes and 140mm fans.",
+    "search_keywords": "noctua nh-d15 cpu cooler",
+    "attributes": {
+      "type": "Air",
+      "fans": "2x 140mm",
+      "compatibility": "AMD & Intel"
+    },
+    "releaseDate": "2023-02-28",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "cooling",
+      "noctua",
+      "cpu"
+    ]
+  },
+  {
+    "product_id": "p060",
+    "name": "Corsair Hydro Series H150i RGB Pro XT",
+    "brand": "Corsair",
+    "category": "Cooling",
+    "price": 159.99,
+    "description": "360mm AIO liquid cooler with RGB lighting and low noise.",
+    "search_keywords": "corsair h150i aio liquid cooler rgb",
+    "attributes": {
+      "type": "Liquid",
+      "radiator_size": "360mm",
+      "compatibility": "AMD & Intel"
+    },
+    "releaseDate": "2023-03-01",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "cooling",
+      "corsair",
+      "aio"
+    ]
+  },
+  {
+    "product_id": "p061",
+    "name": "Logitech C920 HD Pro Webcam",
+    "brand": "Logitech",
+    "category": "Cameras",
+    "price": 79.99,
+    "description": "Full HD 1080p webcam with dual microphones and clear video.",
+    "search_keywords": "logitech c920 webcam hd 1080p",
+    "attributes": {
+      "resolution": "1080p",
+      "connectivity": "USB",
+      "microphone": "Dual"
+    },
+    "releaseDate": "2023-03-02",
+    "rating": 4.7,
+    "stock": 120,
+    "tags": [
+      "webcam",
+      "logitech",
+      "video"
+    ]
+  },
+  {
+    "product_id": "p062",
+    "name": "Elgato Stream Deck",
+    "brand": "Elgato",
+    "category": "Accessories",
+    "price": 149.99,
+    "description": "Customizable control panel for streamers with 15 LCD keys.",
+    "search_keywords": "elgato stream deck accessories streaming",
+    "attributes": {
+      "keys": "15",
+      "connectivity": "USB",
+      "customizable": "Yes"
+    },
+    "releaseDate": "2023-03-03",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "streaming",
+      "elgato",
+      "accessories"
+    ]
+  },
+  {
+    "product_id": "p063",
+    "name": "Blue Yeti USB Microphone",
+    "brand": "Blue Microphones",
+    "category": "Microphones",
+    "price": 129.99,
+    "description": "Professional USB mic with four pickup patterns for streaming.",
+    "search_keywords": "blue yeti usb microphone streaming",
+    "attributes": {
+      "connectivity": "USB",
+      "patterns": "4",
+      "type": "Condenser"
+    },
+    "releaseDate": "2023-03-04",
+    "rating": 4.7,
+    "stock": 110,
+    "tags": [
+      "microphone",
+      "blue",
+      "streaming"
+    ]
+  },
+  {
+    "product_id": "p064",
+    "name": "Shure SM7B Vocal Microphone",
+    "brand": "Shure",
+    "category": "Microphones",
+    "price": 399.99,
+    "description": "Dynamic vocal mic with flat, wide-range frequency response.",
+    "search_keywords": "shure sm7b microphone dynamic vocal",
+    "attributes": {
+      "connectivity": "XLR",
+      "type": "Dynamic",
+      "pop_filter": "Built-in"
+    },
+    "releaseDate": "2023-03-05",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "shure",
+      "vocal"
+    ]
+  },
+  {
+    "product_id": "p065",
+    "name": "RØDE NT1-A Condenser Microphone",
+    "brand": "RØDE",
+    "category": "Microphones",
+    "price": 229.99,
+    "description": "Condenser mic with ultra-low noise for studio recording.",
+    "search_keywords": "rode nt1-a condenser microphone studio",
+    "attributes": {
+      "connectivity": "XLR",
+      "type": "Condenser",
+      "noise_level": "5dBA"
+    },
+    "releaseDate": "2023-03-06",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "rode",
+      "studio"
+    ]
+  },
+  {
+    "product_id": "p066",
+    "name": "Focusrite Scarlett 2i2 Audio Interface",
+    "brand": "Focusrite",
+    "category": "Audio Equipment",
+    "price": 169.99,
+    "description": "2-in, 2-out USB audio interface with 24-bit/192kHz resolution.",
+    "search_keywords": "focusrite scarlett 2i2 audio interface",
+    "attributes": {
+      "inputs": "2",
+      "resolution": "24-bit/192kHz",
+      "connectivity": "USB"
+    },
+    "releaseDate": "2023-03-07",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "audio",
+      "interface",
+      "focusrite"
+    ]
+  },
+  {
+    "product_id": "p067",
+    "name": "M-Audio Oxygen 49 MIDI Controller",
+    "brand": "M-Audio",
+    "category": "Audio Equipment",
+    "price": 149.99,
+    "description": "49-key MIDI controller with assignable pads and faders.",
+    "search_keywords": "m-audio oxygen 49 midi controller",
+    "attributes": {
+      "keys": "49",
+      "connectivity": "USB",
+      "pads": "8"
+    },
+    "releaseDate": "2023-03-08",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "midi",
+      "controller",
+      "m-audio"
+    ]
+  },
+  {
+    "product_id": "p068",
+    "name": "Behringer UMC22 Audio Interface",
+    "brand": "Behringer",
+    "category": "Audio Equipment",
+    "price": 49.99,
+    "description": "USB audio interface with MIDAS mic preamp for home recording.",
+    "search_keywords": "behringer umc22 audio interface usb",
+    "attributes": {
+      "inputs": "2",
+      "connectivity": "USB",
+      "preamp": "MIDAS"
+    },
+    "releaseDate": "2023-03-09",
+    "rating": 4.6,
+    "stock": 110,
+    "tags": [
+      "audio",
+      "interface",
+      "behringer"
+    ]
+  },
+  {
+    "product_id": "p069",
+    "name": "Akai Professional MPK Mini MK3",
+    "brand": "Akai Professional",
+    "category": "Audio Equipment",
+    "price": 119.99,
+    "description": "25-key MIDI controller with drum pads and endless knobs.",
+    "search_keywords": "akai mpk mini mk3 midi controller",
+    "attributes": {
+      "keys": "25",
+      "connectivity": "USB",
+      "pads": "8"
+    },
+    "releaseDate": "2023-03-10",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "midi",
+      "controller",
+      "akai"
+    ]
+  },
+  {
+    "product_id": "p070",
+    "name": "Yamaha HS8 Studio Monitor",
+    "brand": "Yamaha",
+    "category": "Speakers",
+    "price": 399.99,
+    "description": "8-inch powered studio monitor with accurate sound reproduction.",
+    "search_keywords": "yamaha hs8 studio monitor speakers",
+    "attributes": {
+      "size": "8-inch",
+      "power": "120W",
+      "type": "Active"
+    },
+    "releaseDate": "2023-03-11",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "studio monitor",
+      "yamaha",
+      "speakers"
+    ]
+  },
+  {
+    "product_id": "p071",
+    "name": "KRK Rokit 5 G4 Studio Monitor",
+    "brand": "KRK",
+    "category": "Speakers",
+    "price": 179.99,
+    "description": "5-inch powered studio monitor with graphic EQ and DSP.",
+    "search_keywords": "krk rokit 5 g4 studio monitor",
+    "attributes": {
+      "size": "5-inch",
+      "power": "55W",
+      "type": "Active"
+    },
+    "releaseDate": "2023-03-12",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "studio monitor",
+      "krk",
+      "speakers"
+    ]
+  },
+  {
+    "product_id": "p072",
+    "name": "Logitech MX Keys Wireless Keyboard",
+    "brand": "Logitech",
+    "category": "Accessories",
+    "price": 99.99,
+    "description": "Backlit wireless keyboard with Perfect Stroke keys.",
+    "search_keywords": "logitech mx keys keyboard wireless",
+    "attributes": {
+      "connectivity": "Bluetooth",
+      "backlit": "Yes",
+      "type": "Membrane"
+    },
+    "releaseDate": "2023-03-13",
+    "rating": 4.8,
+    "stock": 110,
+    "tags": [
+      "keyboard",
+      "logitech",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p073",
+    "name": "SteelSeries Apex Pro Mechanical Keyboard",
+    "brand": "SteelSeries",
+    "category": "Accessories",
+    "price": 199.99,
+    "description": "Adjustable mechanical switches for customizable actuation.",
+    "search_keywords": "steelseries apex pro keyboard mechanical",
+    "attributes": {
+      "switch_type": "OmniPoint",
+      "connectivity": "Wired",
+      "backlit": "Yes"
+    },
+    "releaseDate": "2023-03-14",
+    "rating": 4.9,
+    "stock": 80,
+    "tags": [
+      "keyboard",
+      "steelseries",
+      "mechanical"
+    ]
+  },
+  {
+    "product_id": "p074",
+    "name": "SanDisk Extreme Portable SSD 1TB",
+    "brand": "SanDisk",
+    "category": "Storage",
+    "price": 149.99,
+    "description": "Rugged SSD with up to 1050MB/s read speeds and IP55 rating.",
+    "search_keywords": "sandisk extreme portable ssd 1tb",
+    "attributes": {
+      "capacity": "1TB",
+      "interface": "USB-C",
+      "read_speed": "1050MB/s"
+    },
+    "releaseDate": "2023-03-15",
+    "rating": 4.8,
+    "stock": 120,
+    "tags": [
+      "ssd",
+      "storage",
+      "sandisk"
+    ]
+  },
+  {
+    "product_id": "p075",
+    "name": "Synology DS220+ NAS",
+    "brand": "Synology",
+    "category": "Storage",
+    "price": 299.99,
+    "description": "2-bay NAS for home and office data management with RAID support.",
+    "search_keywords": "synology ds220+ nas storage",
+    "attributes": {
+      "bays": "2",
+      "cpu": "Intel Celeron",
+      "ram": "2GB"
+    },
+    "releaseDate": "2023-03-16",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "nas",
+      "storage",
+      "synology"
+    ]
+  },
+  {
+    "product_id": "p076",
+    "name": "Netgear Nighthawk AX12 Router",
+    "brand": "Netgear",
+    "category": "Networking",
+    "price": 499.99,
+    "description": "Wi-Fi 6 router with 12 streams and 10.8Gbps speeds.",
+    "search_keywords": "netgear nighthawk ax12 router wifi6",
+    "attributes": {
+      "wifi_standard": "Wi-Fi 6",
+      "speed": "10.8Gbps",
+      "bands": "Tri-band"
+    },
+    "releaseDate": "2023-03-17",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "router",
+      "networking",
+      "netgear"
+    ]
+  },
+  {
+    "product_id": "p077",
+    "name": "TP-Link Archer AX6000 Router",
+    "brand": "TP-Link",
+    "category": "Networking",
+    "price": 349.99,
+    "description": "High-speed Wi-Fi 6 router with 8 antennas and 2.5Gbps WAN port.",
+    "search_keywords": "tp-link archer ax6000 router wifi6",
+    "attributes": {
+      "wifi_standard": "Wi-Fi 6",
+      "speed": "6Gbps",
+      "bands": "Dual-band"
+    },
+    "releaseDate": "2023-03-18",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "router",
+      "networking",
+      "tp-link"
+    ]
+  },
+  {
+    "product_id": "p078",
+    "name": "Ubiquiti UniFi Dream Machine Pro",
+    "brand": "Ubiquiti",
+    "category": "Networking",
+    "price": 379.99,
+    "description": "All-in-one router and security gateway with 10G SFP+.",
+    "search_keywords": "ubiquiti unifi dream machine pro router",
+    "attributes": {
+      "ports": "8",
+      "wan_speed": "10Gbps",
+      "rack_mount": "Yes"
+    },
+    "releaseDate": "2023-03-19",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "router",
+      "ubiquiti",
+      "networking"
+    ]
+  },
+  {
+    "product_id": "p079",
+    "name": "Google Nest WiFi Router",
+    "brand": "Google",
+    "category": "Networking",
+    "price": 169.99,
+    "description": "Whole-home mesh Wi-Fi system with Google Assistant.",
+    "search_keywords": "google nest wifi router mesh",
+    "attributes": {
+      "wifi_standard": "Wi-Fi 5",
+      "coverage": "2200 sq. ft.",
+      "voice_control": "Google Assistant"
+    },
+    "releaseDate": "2023-03-20",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "router",
+      "mesh",
+      "google"
+    ]
+  },
+  {
+    "product_id": "p080",
+    "name": "Samsung Galaxy Tab S7",
+    "brand": "Samsung Electronics",
+    "category": "Tablets",
+    "price": 649.99,
+    "description": "11-inch Android tablet with S Pen and 120Hz display.",
+    "search_keywords": "samsung galaxy tab s7 tablet android",
+    "attributes": {
+      "storage": "128GB",
+      "display": "120Hz",
+      "os": "Android"
+    },
+    "releaseDate": "2023-03-21",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "tablet",
+      "samsung",
+      "android"
+    ]
+  },
+  {
+    "product_id": "p081",
+    "name": "Amazon Kindle Paperwhite (11th Gen)",
+    "brand": "Amazon",
+    "category": "E-readers",
+    "price": 139.99,
+    "description": "Waterproof e-reader with adjustable warm light.",
+    "search_keywords": "kindle paperwhite e-reader amazon",
+    "attributes": {
+      "storage": "8GB",
+      "display": "300 ppi",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-03-22",
+    "rating": 4.8,
+    "stock": 120,
+    "tags": [
+      "e-reader",
+      "amazon",
+      "kindle"
+    ]
+  },
+  {
+    "product_id": "p082",
+    "name": "Oculus Quest 2 VR Headset",
+    "brand": "Meta",
+    "category": "Virtual Reality",
+    "price": 299.99,
+    "description": "Standalone VR headset with 128GB storage and high-res display.",
+    "search_keywords": "oculus quest 2 vr headset meta",
+    "attributes": {
+      "storage": "128GB",
+      "resolution": "1832x1920",
+      "wireless": "Yes"
+    },
+    "releaseDate": "2023-03-23",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "vr",
+      "headset",
+      "meta"
+    ]
+  },
+  {
+    "product_id": "p083",
+    "name": "Sony WH-1000XM4 Wireless Headphones",
+    "brand": "Sony Corporation",
+    "category": "Headphones",
+    "price": 349.99,
+    "description": "Noise-canceling headphones with 30-hour battery life.",
+    "search_keywords": "sony wh-1000xm4 headphones wireless",
+    "attributes": {
+      "battery": "30 hours",
+      "connectivity": "Bluetooth",
+      "noise_canceling": "Yes"
+    },
+    "releaseDate": "2023-03-24",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "headphones",
+      "sony",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p084",
+    "name": "Jabra Elite 75t Wireless Earbuds",
+    "brand": "Jabra",
+    "category": "Headphones",
+    "price": 149.99,
+    "description": "Compact true wireless earbuds with active noise cancellation.",
+    "search_keywords": "jabra elite 75t earbuds wireless",
+    "attributes": {
+      "battery": "7.5 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "IP55"
+    },
+    "releaseDate": "2023-03-25",
+    "rating": 4.7,
+    "stock": 110,
+    "tags": [
+      "earbuds",
+      "jabra",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p085",
+    "name": "Dell XPS 15 Laptop",
+    "brand": "Dell Inc.",
+    "category": "Laptops",
+    "price": 1799.99,
+    "description": "15.6-inch laptop with Intel i7 and NVIDIA GTX 1650 Ti.",
+    "search_keywords": "dell xps 15 laptop intel nvidia",
+    "attributes": {
+      "processor": "Intel i7",
+      "graphics": "GTX 1650 Ti",
+      "storage": "512GB SSD"
+    },
+    "releaseDate": "2023-03-26",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "laptop",
+      "dell",
+      "windows"
+    ]
+  },
+  {
+    "product_id": "p086",
+    "name": "Apple MacBook Pro 14-inch",
+    "brand": "Apple Inc.",
+    "category": "Laptops",
+    "price": 1999.99,
+    "description": "M1 Pro chip, 14-inch Liquid Retina XDR display.",
+    "search_keywords": "macbook pro 14 apple laptop m1",
+    "attributes": {
+      "processor": "M1 Pro",
+      "storage": "512GB SSD",
+      "display": "Liquid Retina XDR"
+    },
+    "releaseDate": "2023-03-27",
+    "rating": 4.9,
+    "stock": 50,
+    "tags": [
+      "laptop",
+      "apple",
+      "macos"
+    ]
+  },
+  {
+    "product_id": "p087",
+    "name": "Microsoft Surface Laptop 4",
+    "brand": "Microsoft Corporation",
+    "category": "Laptops",
+    "price": 1299.99,
+    "description": "13.5-inch touchscreen laptop with AMD Ryzen 5.",
+    "search_keywords": "surface laptop 4 microsoft amd",
+    "attributes": {
+      "processor": "AMD Ryzen 5",
+      "storage": "256GB SSD",
+      "display": "Touchscreen"
+    },
+    "releaseDate": "2023-03-28",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "laptop",
+      "microsoft",
+      "windows"
+    ]
+  },
+  {
+    "product_id": "p088",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 9",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "price": 1699.99,
+    "description": "14-inch business laptop with Intel i7 and 16GB RAM.",
+    "search_keywords": "thinkpad x1 carbon lenovo laptop",
+    "attributes": {
+      "processor": "Intel i7",
+      "storage": "512GB SSD",
+      "ram": "16GB"
+    },
+    "releaseDate": "2023-03-29",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "laptop",
+      "lenovo",
+      "business"
+    ]
+  },
+  {
+    "product_id": "p089",
+    "name": "Asus ROG Zephyrus G14 Gaming Laptop",
+    "brand": "ASUSTek Computer Inc.",
+    "category": "Laptops",
+    "price": 1499.99,
+    "description": "14-inch gaming laptop with AMD Ryzen 9 and RTX 3060.",
+    "search_keywords": "rog zephyrus g14 gaming laptop asus",
+    "attributes": {
+      "processor": "AMD Ryzen 9",
+      "graphics": "RTX 3060",
+      "storage": "1TB SSD"
+    },
+    "releaseDate": "2023-03-30",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "laptop",
+      "asus",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p090",
+    "name": "Razer Blade 15 Advanced Gaming Laptop",
+    "brand": "Razer Inc.",
+    "category": "Laptops",
+    "price": 2299.99,
+    "description": "15.6-inch gaming laptop with RTX 3080 and 360Hz display.",
+    "search_keywords": "razer blade 15 gaming laptop",
+    "attributes": {
+      "processor": "Intel i7",
+      "graphics": "RTX 3080",
+      "storage": "1TB SSD"
+    },
+    "releaseDate": "2023-03-31",
+    "rating": 4.9,
+    "stock": 40,
+    "tags": [
+      "laptop",
+      "razer",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p091",
+    "name": "HP Spectre x360 14",
+    "brand": "HP Inc.",
+    "category": "Laptops",
+    "price": 1599.99,
+    "description": "2-in-1 convertible laptop with Intel i7 and OLED display.",
+    "search_keywords": "hp spectre x360 convertible laptop",
+    "attributes": {
+      "processor": "Intel i7",
+      "display": "OLED",
+      "storage": "512GB SSD"
+    },
+    "releaseDate": "2023-04-01",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "laptop",
+      "hp",
+      "convertible"
+    ]
+  },
+  {
+    "product_id": "p092",
+    "name": "Acer Predator Helios 300",
+    "brand": "Acer",
+    "category": "Laptops",
+    "price": 1299.99,
+    "description": "15.6-inch gaming laptop with RTX 3060 and 144Hz display.",
+    "search_keywords": "acer predator helios 300 gaming laptop",
+    "attributes": {
+      "processor": "Intel i7",
+      "graphics": "RTX 3060",
+      "storage": "512GB SSD"
+    },
+    "releaseDate": "2023-04-02",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "laptop",
+      "acer",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p093",
+    "name": "MSI GE66 Raider",
+    "brand": "MSI",
+    "category": "Laptops",
+    "price": 1799.99,
+    "description": "Gaming laptop with RTX 3070 and customizable RGB lighting.",
+    "search_keywords": "msi ge66 raider gaming laptop",
+    "attributes": {
+      "processor": "Intel i7",
+      "graphics": "RTX 3070",
+      "storage": "1TB SSD"
+    },
+    "releaseDate": "2023-04-03",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "laptop",
+      "msi",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p094",
+    "name": "Alienware m15 R6",
+    "brand": "Dell Inc.",
+    "category": "Laptops",
+    "price": 2099.99,
+    "description": "15.6-inch gaming laptop with RTX 3080 and 240Hz display.",
+    "search_keywords": "alienware m15 r6 gaming laptop",
+    "attributes": {
+      "processor": "Intel i9",
+      "graphics": "RTX 3080",
+      "storage": "1TB SSD"
+    },
+    "releaseDate": "2023-04-04",
+    "rating": 4.9,
+    "stock": 40,
+    "tags": [
+      "laptop",
+      "alienware",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p095",
+    "name": "Bose QuietComfort 45",
+    "brand": "Bose Corporation",
+    "category": "Headphones",
+    "price": 329.99,
+    "description": "Wireless noise-canceling headphones with 24-hour battery life.",
+    "search_keywords": "bose quietcomfort 45 headphones wireless",
+    "attributes": {
+      "battery": "24 hours",
+      "connectivity": "Bluetooth",
+      "noise_canceling": "Yes"
+    },
+    "releaseDate": "2023-04-05",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "headphones",
+      "bose",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p096",
+    "name": "Sennheiser HD 660S",
+    "brand": "Sennheiser",
+    "category": "Headphones",
+    "price": 499.99,
+    "description": "Open-back headphones for audiophiles with balanced sound.",
+    "search_keywords": "sennheiser hd 660s headphones open-back",
+    "attributes": {
+      "type": "Open-back",
+      "connectivity": "Wired",
+      "frequency_response": "10Hz-41kHz"
+    },
+    "releaseDate": "2023-04-06",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "headphones",
+      "sennheiser",
+      "wired"
+    ]
+  },
+  {
+    "product_id": "p097",
+    "name": "HyperX Cloud Alpha Wireless",
+    "brand": "HyperX",
+    "category": "Headphones",
+    "price": 159.99,
+    "description": "Wireless gaming headset with 300-hour battery life.",
+    "search_keywords": "hyperx cloud alpha wireless headset",
+    "attributes": {
+      "battery": "300 hours",
+      "connectivity": "Wireless",
+      "surround_sound": "Yes"
+    },
+    "releaseDate": "2023-04-07",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "headset",
+      "gaming",
+      "hyperx"
+    ]
+  },
+  {
+    "product_id": "p098",
+    "name": "SteelSeries Arctis Pro + GameDAC",
+    "brand": "SteelSeries",
+    "category": "Headphones",
+    "price": 249.99,
+    "description": "Wired headset with Hi-Res audio and dedicated DAC.",
+    "search_keywords": "steelseries arctis pro gamedac headset",
+    "attributes": {
+      "connectivity": "Wired",
+      "dac": "Yes",
+      "hi_res_audio": "Yes"
+    },
+    "releaseDate": "2023-04-08",
+    "rating": 4.7,
+    "stock": 60,
+    "tags": [
+      "headset",
+      "steelseries",
+      "wired"
+    ]
+  },
+  {
+    "product_id": "p099",
+    "name": "Beyerdynamic DT 990 Pro",
+    "brand": "Beyerdynamic",
+    "category": "Headphones",
+    "price": 159.99,
+    "description": "Studio headphones with open-back design and strong bass.",
+    "search_keywords": "beyerdynamic dt 990 pro headphones open-back",
+    "attributes": {
+      "type": "Open-back",
+      "connectivity": "Wired",
+      "impedance": "250 Ohm"
+    },
+    "releaseDate": "2023-04-09",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "headphones",
+      "beyerdynamic",
+      "studio"
+    ]
+  },
+  {
+    "product_id": "p100",
+    "name": "Marshall Major IV",
+    "brand": "Marshall",
+    "category": "Headphones",
+    "price": 149.99,
+    "description": "On-ear Bluetooth headphones with 80-hour battery life.",
+    "search_keywords": "marshall major iv headphones bluetooth",
+    "attributes": {
+      "battery": "80 hours",
+      "connectivity": "Bluetooth",
+      "type": "On-ear"
+    },
+    "releaseDate": "2023-04-10",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "headphones",
+      "marshall",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p101",
+    "name": "Sony PlayStation 5",
+    "brand": "Sony",
+    "category": "Gaming Consoles",
+    "price": 499.99,
+    "description": "Next-gen gaming console with ray tracing and 4K support.",
+    "search_keywords": "playstation 5 ps5 sony console",
+    "attributes": {
+      "storage": "825GB",
+      "resolution": "4K",
+      "ray_tracing": "Yes"
+    },
+    "releaseDate": "2023-04-11",
+    "rating": 4.9,
+    "stock": 50,
+    "tags": [
+      "gaming",
+      "console",
+      "sony"
+    ]
+  },
+  {
+    "product_id": "p102",
+    "name": "Xbox Series X",
+    "brand": "Microsoft",
+    "category": "Gaming Consoles",
+    "price": 499.99,
+    "description": "Powerful gaming console with 1TB SSD and 4K gaming.",
+    "search_keywords": "xbox series x microsoft console",
+    "attributes": {
+      "storage": "1TB",
+      "resolution": "4K",
+      "ray_tracing": "Yes"
+    },
+    "releaseDate": "2023-04-12",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "gaming",
+      "console",
+      "microsoft"
+    ]
+  },
+  {
+    "product_id": "p103",
+    "name": "Apple iPad Pro 11-inch",
+    "brand": "Apple",
+    "category": "Tablets",
+    "price": 799.99,
+    "description": "M1 chip with 11-inch Liquid Retina display and 128GB storage.",
+    "search_keywords": "ipad pro 11 apple tablet m1",
+    "attributes": {
+      "storage": "128GB",
+      "processor": "M1",
+      "display": "Liquid Retina"
+    },
+    "releaseDate": "2023-04-13",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "tablet",
+      "apple",
+      "ipad"
+    ]
+  },
+  {
+    "product_id": "p104",
+    "name": "Samsung Galaxy Buds Pro",
+    "brand": "Samsung",
+    "category": "Headphones",
+    "price": 199.99,
+    "description": "True wireless earbuds with active noise cancellation.",
+    "search_keywords": "galaxy buds pro samsung earbuds",
+    "attributes": {
+      "battery": "8 hours",
+      "connectivity": "Bluetooth",
+      "noise_canceling": "Yes"
+    },
+    "releaseDate": "2023-04-14",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "earbuds",
+      "samsung",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p105",
+    "name": "DJI Mavic Air 2 Drone",
+    "brand": "DJI",
+    "category": "Drones",
+    "price": 799.99,
+    "description": "4K drone with 34-minute flight time and obstacle sensors.",
+    "search_keywords": "dji mavic air 2 drone 4k",
+    "attributes": {
+      "camera": "4K",
+      "flight_time": "34 min",
+      "range": "10 km"
+    },
+    "releaseDate": "2023-04-15",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "drone",
+      "dji",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p106",
+    "name": "GoPro HERO10 Black",
+    "brand": "GoPro",
+    "category": "Cameras",
+    "price": 499.99,
+    "description": "5.3K action camera with GP2 processor and HyperSmooth 4.0.",
+    "search_keywords": "gopro hero10 action camera 5.3k",
+    "attributes": {
+      "resolution": "5.3K",
+      "stabilization": "HyperSmooth 4.0",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-04-16",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "camera",
+      "gopro",
+      "action"
+    ]
+  },
+  {
+    "product_id": "p107",
+    "name": "Canon EOS R6",
+    "brand": "Canon",
+    "category": "Cameras",
+    "price": 2499.99,
+    "description": "Full-frame mirrorless camera with 4K video and 20.1MP sensor.",
+    "search_keywords": "canon eos r6 mirrorless camera 4k",
+    "attributes": {
+      "resolution": "20.1MP",
+      "video": "4K",
+      "sensor": "Full-frame"
+    },
+    "releaseDate": "2023-04-17",
+    "rating": 4.9,
+    "stock": 40,
+    "tags": [
+      "camera",
+      "canon",
+      "mirrorless"
+    ]
+  },
+  {
+    "product_id": "p108",
+    "name": "Sony Alpha 7C",
+    "brand": "Sony",
+    "category": "Cameras",
+    "price": 1799.99,
+    "description": "Compact full-frame mirrorless camera with 24.2MP sensor.",
+    "search_keywords": "sony alpha 7c mirrorless camera",
+    "attributes": {
+      "resolution": "24.2MP",
+      "video": "4K",
+      "sensor": "Full-frame"
+    },
+    "releaseDate": "2023-04-18",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "camera",
+      "sony",
+      "mirrorless"
+    ]
+  },
+  {
+    "product_id": "p109",
+    "name": "Nikon Z6 II",
+    "brand": "Nikon",
+    "category": "Cameras",
+    "price": 1999.99,
+    "description": "Mirrorless camera with 24.5MP sensor and 4K video.",
+    "search_keywords": "nikon z6 ii mirrorless camera 4k",
+    "attributes": {
+      "resolution": "24.5MP",
+      "video": "4K",
+      "sensor": "Full-frame"
+    },
+    "releaseDate": "2023-04-19",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "camera",
+      "nikon",
+      "mirrorless"
+    ]
+  },
+  {
+    "product_id": "p110",
+    "name": "Panasonic Lumix GH5 II",
+    "brand": "Panasonic",
+    "category": "Cameras",
+    "price": 1699.99,
+    "description": "Mirrorless camera with 20.3MP sensor and 4K 60p video.",
+    "search_keywords": "panasonic lumix gh5 ii camera 4k",
+    "attributes": {
+      "resolution": "20.3MP",
+      "video": "4K 60p",
+      "sensor": "Micro Four Thirds"
+    },
+    "releaseDate": "2023-04-20",
+    "rating": 4.7,
+    "stock": 50,
+    "tags": [
+      "camera",
+      "panasonic",
+      "mirrorless"
+    ]
+  },
+  {
+    "product_id": "p111",
+    "name": "Dell UltraSharp U2720Q Monitor",
+    "brand": "Dell",
+    "category": "Monitors",
+    "price": 649.99,
+    "description": "27-inch 4K USB-C monitor with HDR support.",
+    "search_keywords": "dell ultrasharp u2720q 4k monitor",
+    "attributes": {
+      "resolution": "4K",
+      "size": "27-inch",
+      "ports": "USB-C, HDMI, DisplayPort"
+    },
+    "releaseDate": "2023-04-21",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "monitor",
+      "dell",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p112",
+    "name": "LG UltraGear 27GL850 Gaming Monitor",
+    "brand": "LG",
+    "category": "Monitors",
+    "price": 499.99,
+    "description": "27-inch QHD monitor with 144Hz and 1ms response time.",
+    "search_keywords": "lg ultragear 27gl850 monitor gaming",
+    "attributes": {
+      "resolution": "QHD",
+      "refresh_rate": "144Hz",
+      "response_time": "1ms"
+    },
+    "releaseDate": "2023-04-22",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "monitor",
+      "lg",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p113",
+    "name": "BenQ PD3220U Designer Monitor",
+    "brand": "BenQ",
+    "category": "Monitors",
+    "price": 1199.99,
+    "description": "32-inch 4K monitor with Thunderbolt 3 and HDR10.",
+    "search_keywords": "benq pd3220u 4k monitor designer",
+    "attributes": {
+      "resolution": "4K",
+      "size": "32-inch",
+      "ports": "Thunderbolt 3, HDMI, DisplayPort"
+    },
+    "releaseDate": "2023-04-23",
+    "rating": 4.7,
+    "stock": 50,
+    "tags": [
+      "monitor",
+      "benq",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p114",
+    "name": "Apple Magic Keyboard",
+    "brand": "Apple",
+    "category": "Accessories",
+    "price": 99.99,
+    "description": "Wireless keyboard with numeric keypad and rechargeable battery.",
+    "search_keywords": "apple magic keyboard wireless",
+    "attributes": {
+      "connectivity": "Bluetooth",
+      "battery_life": "1 month",
+      "backlit": "No"
+    },
+    "releaseDate": "2023-04-24",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "keyboard",
+      "apple",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p115",
+    "name": "Microsoft Surface Mouse",
+    "brand": "Microsoft",
+    "category": "Accessories",
+    "price": 49.99,
+    "description": "Bluetooth mouse with ergonomic design and metal scroll wheel.",
+    "search_keywords": "microsoft surface mouse bluetooth",
+    "attributes": {
+      "dpi": "1600",
+      "connectivity": "Bluetooth",
+      "buttons": "2"
+    },
+    "releaseDate": "2023-04-25",
+    "rating": 4.6,
+    "stock": 120,
+    "tags": [
+      "mouse",
+      "microsoft",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p116",
+    "name": "Corsair MM800 RGB Polaris Mouse Pad",
+    "brand": "Corsair",
+    "category": "Accessories",
+    "price": 49.99,
+    "description": "RGB mouse pad with 15 lighting zones and USB pass-through.",
+    "search_keywords": "corsair mm800 rgb mouse pad",
+    "attributes": {
+      "lighting_zones": "15",
+      "connectivity": "USB",
+      "material": "Micro-textured"
+    },
+    "releaseDate": "2023-04-26",
+    "rating": 4.7,
+    "stock": 110,
+    "tags": [
+      "mouse pad",
+      "corsair",
+      "rgb"
+    ]
+  },
+  {
+    "product_id": "p117",
+    "name": "Logitech G915 TKL Wireless Keyboard",
+    "brand": "Logitech",
+    "category": "Accessories",
+    "price": 229.99,
+    "description": "Tenkeyless wireless mechanical keyboard with low-profile switches.",
+    "search_keywords": "logitech g915 tkl keyboard wireless",
+    "attributes": {
+      "switch_type": "Low-profile",
+      "connectivity": "Bluetooth, Wireless",
+      "battery_life": "40 hours"
+    },
+    "releaseDate": "2023-04-27",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "keyboard",
+      "logitech",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p118",
+    "name": "Razer Basilisk V3 Gaming Mouse",
+    "brand": "Razer",
+    "category": "Accessories",
+    "price": 69.99,
+    "description": "Ergonomic gaming mouse with 26K DPI sensor and Chroma RGB.",
+    "search_keywords": "razer basilisk v3 mouse gaming",
+    "attributes": {
+      "dpi": "26000",
+      "connectivity": "Wired",
+      "buttons": "11"
+    },
+    "releaseDate": "2023-04-28",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "mouse",
+      "razer",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p119",
+    "name": "ASUS TUF Gaming VG27AQ",
+    "brand": "ASUS",
+    "category": "Monitors",
+    "price": 429.99,
+    "description": "27-inch QHD monitor with 165Hz refresh rate and G-Sync.",
+    "search_keywords": "asus tuf gaming vg27aq monitor",
+    "attributes": {
+      "resolution": "QHD",
+      "refresh_rate": "165Hz",
+      "sync": "G-Sync"
+    },
+    "releaseDate": "2023-04-29",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "monitor",
+      "asus",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p120",
+    "name": "NZXT Kraken X63 RGB Liquid Cooler",
+    "brand": "NZXT",
+    "category": "Cooling",
+    "price": 159.99,
+    "description": "280mm AIO liquid cooler with customizable RGB lighting.",
+    "search_keywords": "nzxt kraken x63 rgb cooler",
+    "attributes": {
+      "type": "Liquid",
+      "radiator_size": "280mm",
+      "rgb": "Yes"
+    },
+    "releaseDate": "2023-04-30",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "cooler",
+      "nzxt",
+      "rgb"
+    ]
+  },
+  {
+    "product_id": "p121",
+    "name": "LG CX OLED TV",
+    "brand": "LG",
+    "category": "Televisions",
+    "price": 1599.99,
+    "description": "55-inch 4K OLED TV with NVIDIA G-Sync and Dolby Vision.",
+    "search_keywords": "lg cx oled tv 4k",
+    "attributes": {
+      "resolution": "4K",
+      "size": "55-inch",
+      "technology": "OLED"
+    },
+    "releaseDate": "2023-04-30",
+    "rating": 4.9,
+    "stock": 40,
+    "tags": [
+      "tv",
+      "lg",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p122",
+    "name": "Samsung Q90T QLED TV",
+    "brand": "Samsung",
+    "category": "Televisions",
+    "price": 1799.99,
+    "description": "65-inch QLED TV with HDR10+ and 120Hz refresh rate.",
+    "search_keywords": "samsung q90t qled tv 4k",
+    "attributes": {
+      "resolution": "4K",
+      "size": "65-inch",
+      "technology": "QLED"
+    },
+    "releaseDate": "2023-05-01",
+    "rating": 4.8,
+    "stock": 30,
+    "tags": [
+      "tv",
+      "samsung",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p123",
+    "name": "Sony A8H OLED TV",
+    "brand": "Sony",
+    "category": "Televisions",
+    "price": 1999.99,
+    "description": "55-inch OLED TV with Dolby Vision and Acoustic Surface Audio.",
+    "search_keywords": "sony a8h oled tv 4k",
+    "attributes": {
+      "resolution": "4K",
+      "size": "55-inch",
+      "technology": "OLED"
+    },
+    "releaseDate": "2023-05-02",
+    "rating": 4.9,
+    "stock": 30,
+    "tags": [
+      "tv",
+      "sony",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p124",
+    "name": "Vizio P-Series Quantum X",
+    "brand": "Vizio",
+    "category": "Televisions",
+    "price": 1299.99,
+    "description": "65-inch 4K TV with Quantum Color and HDR10+.",
+    "search_keywords": "vizio p-series quantum x tv 4k",
+    "attributes": {
+      "resolution": "4K",
+      "size": "65-inch",
+      "technology": "Quantum Color"
+    },
+    "releaseDate": "2023-05-03",
+    "rating": 4.7,
+    "stock": 40,
+    "tags": [
+      "tv",
+      "vizio",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p125",
+    "name": "TCL 6-Series Roku TV",
+    "brand": "TCL",
+    "category": "Televisions",
+    "price": 999.99,
+    "description": "55-inch QLED TV with Dolby Vision and Roku OS.",
+    "search_keywords": "tcl 6-series qled tv 4k",
+    "attributes": {
+      "resolution": "4K",
+      "size": "55-inch",
+      "technology": "QLED"
+    },
+    "releaseDate": "2023-05-04",
+    "rating": 4.7,
+    "stock": 50,
+    "tags": [
+      "tv",
+      "tcl",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p126",
+    "name": "Sony Xperia 1 III",
+    "brand": "Sony",
+    "category": "Smartphones",
+    "price": 1199.99,
+    "description": "6.5-inch 4K OLED display with triple camera system and 5G.",
+    "search_keywords": "sony xperia 1 iii smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-01",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "smartphone",
+      "sony",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p127",
+    "name": "OnePlus 9 Pro",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "price": 969.99,
+    "description": "6.7-inch AMOLED display with Snapdragon 888 and 5G.",
+    "search_keywords": "oneplus 9 pro smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Quad",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-02",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "smartphone",
+      "oneplus",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p128",
+    "name": "Google Pixel 6 Pro",
+    "brand": "Google",
+    "category": "Smartphones",
+    "price": 899.99,
+    "description": "6.71-inch AMOLED display with Google Tensor chip and 5G.",
+    "search_keywords": "google pixel 6 pro smartphone 5g",
+    "attributes": {
+      "storage": "128GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-03",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "smartphone",
+      "google",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p129",
+    "name": "Samsung Galaxy S22 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 1199.99,
+    "description": "6.8-inch Dynamic AMOLED with 108MP camera and S Pen.",
+    "search_keywords": "samsung galaxy s22 ultra smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Quad",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-04",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "smartphone",
+      "samsung",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p130",
+    "name": "Apple iPhone 13 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 1099.99,
+    "description": "6.7-inch Super Retina XDR with A15 Bionic and 5G.",
+    "search_keywords": "iphone 13 pro max smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-05",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "smartphone",
+      "apple",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p131",
+    "name": "Asus ROG Phone 5",
+    "brand": "ASUS",
+    "category": "Smartphones",
+    "price": 999.99,
+    "description": "6.78-inch AMOLED with Snapdragon 888 and 144Hz refresh rate.",
+    "search_keywords": "asus rog phone 5 gaming smartphone",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-06",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "smartphone",
+      "asus",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p132",
+    "name": "Lenovo Legion Duel 2",
+    "brand": "Lenovo",
+    "category": "Smartphones",
+    "price": 949.99,
+    "description": "Gaming smartphone with 144Hz display and dual cooling.",
+    "search_keywords": "lenovo legion duel 2 gaming smartphone",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Dual",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-07",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "smartphone",
+      "lenovo",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p133",
+    "name": "Xiaomi Mi 11 Ultra",
+    "brand": "Xiaomi",
+    "category": "Smartphones",
+    "price": 799.99,
+    "description": "6.81-inch AMOLED with 120Hz refresh rate and 5G.",
+    "search_keywords": "xiaomi mi 11 ultra smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-08",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "smartphone",
+      "xiaomi",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p134",
+    "name": "Motorola Edge 20 Pro",
+    "brand": "Motorola",
+    "category": "Smartphones",
+    "price": 699.99,
+    "description": "6.7-inch OLED with Snapdragon 870 and 108MP camera.",
+    "search_keywords": "motorola edge 20 pro smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-09",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "smartphone",
+      "motorola",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p135",
+    "name": "Realme GT 2 Pro",
+    "brand": "Realme",
+    "category": "Smartphones",
+    "price": 599.99,
+    "description": "6.7-inch AMOLED with Snapdragon 8 Gen 1 and 5G.",
+    "search_keywords": "realme gt 2 pro smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-10",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "smartphone",
+      "realme",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p136",
+    "name": "Vivo X70 Pro+",
+    "brand": "Vivo",
+    "category": "Smartphones",
+    "price": 899.99,
+    "description": "6.78-inch AMOLED with Snapdragon 888+ and Zeiss optics.",
+    "search_keywords": "vivo x70 pro plus smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Quad",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-11",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "smartphone",
+      "vivo",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p137",
+    "name": "Oppo Find X3 Pro",
+    "brand": "Oppo",
+    "category": "Smartphones",
+    "price": 1099.99,
+    "description": "6.7-inch AMOLED with 120Hz and 10-bit color support.",
+    "search_keywords": "oppo find x3 pro smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Quad",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-12",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "smartphone",
+      "oppo",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p138",
+    "name": "Nokia XR20",
+    "brand": "Nokia",
+    "category": "Smartphones",
+    "price": 549.99,
+    "description": "Rugged 5G smartphone with MIL-STD-810H and IP68 rating.",
+    "search_keywords": "nokia xr20 rugged smartphone 5g",
+    "attributes": {
+      "storage": "128GB",
+      "camera": "Dual",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-13",
+    "rating": 4.6,
+    "stock": 80,
+    "tags": [
+      "smartphone",
+      "nokia",
+      "rugged"
+    ]
+  },
+  {
+    "product_id": "p139",
+    "name": "Honor Magic3 Pro",
+    "brand": "Honor",
+    "category": "Smartphones",
+    "price": 999.99,
+    "description": "6.76-inch OLED with Snapdragon 888+ and quad camera.",
+    "search_keywords": "honor magic3 pro smartphone 5g",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Quad",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-14",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "smartphone",
+      "honor",
+      "5g"
+    ]
+  },
+  {
+    "product_id": "p140",
+    "name": "Black Shark 4 Pro",
+    "brand": "Black Shark",
+    "category": "Smartphones",
+    "price": 699.99,
+    "description": "Gaming smartphone with Snapdragon 870 and 144Hz display.",
+    "search_keywords": "black shark 4 pro gaming smartphone",
+    "attributes": {
+      "storage": "256GB",
+      "camera": "Triple",
+      "connectivity": "5G"
+    },
+    "releaseDate": "2023-05-15",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "smartphone",
+      "black shark",
+      "gaming"
+    ]
+  },
+  {
+    "product_id": "p141",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "category": "Headphones",
+    "price": 399.99,
+    "description": "Wireless noise-canceling headphones with 30-hour battery life.",
+    "search_keywords": "sony wh-1000xm5 headphones wireless",
+    "attributes": {
+      "battery": "30 hours",
+      "connectivity": "Bluetooth",
+      "noise_canceling": "Yes"
+    },
+    "releaseDate": "2023-05-16",
+    "rating": 4.9,
+    "stock": 70,
+    "tags": [
+      "headphones",
+      "sony",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p142",
+    "name": "Bose SoundLink Revolve+",
+    "brand": "Bose",
+    "category": "Speakers",
+    "price": 299.99,
+    "description": "Portable Bluetooth speaker with 360-degree sound.",
+    "search_keywords": "bose soundlink revolve plus speaker",
+    "attributes": {
+      "battery": "16 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-17",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "speaker",
+      "bose",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p143",
+    "name": "JBL Charge 5",
+    "brand": "JBL",
+    "category": "Speakers",
+    "price": 179.99,
+    "description": "Waterproof Bluetooth speaker with 20-hour battery life.",
+    "search_keywords": "jbl charge 5 speaker bluetooth",
+    "attributes": {
+      "battery": "20 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-18",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "speaker",
+      "jbl",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p144",
+    "name": "Ultimate Ears BOOM 3",
+    "brand": "Ultimate Ears",
+    "category": "Speakers",
+    "price": 149.99,
+    "description": "Portable Bluetooth speaker with 15-hour battery life and IP67.",
+    "search_keywords": "ultimate ears boom 3 speaker bluetooth",
+    "attributes": {
+      "battery": "15 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-19",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "speaker",
+      "ultimate ears",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p145",
+    "name": "Google Nest Audio",
+    "brand": "Google",
+    "category": "Speakers",
+    "price": 99.99,
+    "description": "Smart speaker with Google Assistant and rich sound.",
+    "search_keywords": "google nest audio smart speaker",
+    "attributes": {
+      "assistant": "Google Assistant",
+      "connectivity": "Wi-Fi",
+      "smart": "Yes"
+    },
+    "releaseDate": "2023-05-20",
+    "rating": 4.7,
+    "stock": 100,
+    "tags": [
+      "speaker",
+      "google",
+      "smart"
+    ]
+  },
+  {
+    "product_id": "p146",
+    "name": "Anker Soundcore Motion+",
+    "brand": "Anker",
+    "category": "Speakers",
+    "price": 99.99,
+    "description": "Portable Bluetooth speaker with Hi-Res Audio and BassUp technology.",
+    "search_keywords": "anker soundcore motion plus speaker",
+    "attributes": {
+      "battery": "12 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-21",
+    "rating": 4.7,
+    "stock": 100,
+    "tags": [
+      "speaker",
+      "anker",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p147",
+    "name": "Sony SRS-XB43",
+    "brand": "Sony",
+    "category": "Speakers",
+    "price": 229.99,
+    "description": "Portable Bluetooth speaker with Extra Bass and IP67 rating.",
+    "search_keywords": "sony srs-xb43 speaker bluetooth",
+    "attributes": {
+      "battery": "24 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-22",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "speaker",
+      "sony",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p148",
+    "name": "Bang & Olufsen Beosound A1 (2nd Gen)",
+    "brand": "Bang & Olufsen",
+    "category": "Speakers",
+    "price": 249.99,
+    "description": "Portable Bluetooth speaker with Alexa support and IP67.",
+    "search_keywords": "bang olufsen beosound a1 speaker bluetooth",
+    "attributes": {
+      "battery": "18 hours",
+      "connectivity": "Bluetooth",
+      "assistant": "Alexa"
+    },
+    "releaseDate": "2023-05-23",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "speaker",
+      "bang & olufsen",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p149",
+    "name": "Harman Kardon Onyx Studio 6",
+    "brand": "Harman Kardon",
+    "category": "Speakers",
+    "price": 299.99,
+    "description": "Portable Bluetooth speaker with IPX7 waterproof rating.",
+    "search_keywords": "harman kardon onyx studio 6 speaker bluetooth",
+    "attributes": {
+      "battery": "8 hours",
+      "connectivity": "Bluetooth",
+      "waterproof": "Yes"
+    },
+    "releaseDate": "2023-05-24",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "speaker",
+      "harman kardon",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p150",
+    "name": "Klipsch The One II",
+    "brand": "Klipsch",
+    "category": "Speakers",
+    "price": 299.99,
+    "description": "Wireless speaker with retro design and Bluetooth.",
+    "search_keywords": "klipsch the one ii speaker bluetooth",
+    "attributes": {
+      "connectivity": "Bluetooth",
+      "power": "60W",
+      "design": "Retro"
+    },
+    "releaseDate": "2023-05-25",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "speaker",
+      "klipsch",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p151",
+    "name": "Amazon Echo (4th Gen)",
+    "brand": "Amazon",
+    "category": "Speakers",
+    "price": 99.99,
+    "description": "Smart speaker with Alexa and premium sound.",
+    "search_keywords": "amazon echo 4th gen smart speaker",
+    "attributes": {
+      "assistant": "Alexa",
+      "connectivity": "Wi-Fi",
+      "smart": "Yes"
+    },
+    "releaseDate": "2023-05-21",
+    "rating": 4.7,
+    "stock": 120,
+    "tags": [
+      "speaker",
+      "amazon",
+      "smart"
+    ]
+  },
+  {
+    "product_id": "p152",
+    "name": "Sonos One SL",
+    "brand": "Sonos",
+    "category": "Speakers",
+    "price": 179.99,
+    "description": "Wireless speaker with rich sound and Apple AirPlay 2.",
+    "search_keywords": "sonos one sl wireless speaker",
+    "attributes": {
+      "connectivity": "Wi-Fi",
+      "smart": "No",
+      "airplay": "Yes"
+    },
+    "releaseDate": "2023-05-22",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "speaker",
+      "sonos",
+      "wireless"
+    ]
+  },
+  {
+    "product_id": "p153",
+    "name": "Marshall Stanmore II",
+    "brand": "Marshall",
+    "category": "Speakers",
+    "price": 349.99,
+    "description": "Bluetooth speaker with classic design and powerful sound.",
+    "search_keywords": "marshall stanmore ii speaker bluetooth",
+    "attributes": {
+      "connectivity": "Bluetooth",
+      "power": "80W",
+      "design": "Classic"
+    },
+    "releaseDate": "2023-05-23",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "speaker",
+      "marshall",
+      "bluetooth"
+    ]
+  },
+  {
+    "product_id": "p154",
+    "name": "Bose Soundbar 700",
+    "brand": "Bose",
+    "category": "Speakers",
+    "price": 799.99,
+    "description": "Premium soundbar with Alexa and Google Assistant.",
+    "search_keywords": "bose soundbar 700 smart speaker",
+    "attributes": {
+      "connectivity": "Wi-Fi, Bluetooth",
+      "assistant": "Alexa, Google Assistant",
+      "smart": "Yes"
+    },
+    "releaseDate": "2023-05-24",
+    "rating": 4.9,
+    "stock": 50,
+    "tags": [
+      "speaker",
+      "bose",
+      "soundbar"
+    ]
+  },
+  {
+    "product_id": "p155",
+    "name": "Logitech Brio 4K Webcam",
+    "brand": "Logitech",
+    "category": "Webcams",
+    "price": 199.99,
+    "description": "4K UHD webcam with HDR and Windows Hello support.",
+    "search_keywords": "logitech brio 4k webcam hdr",
+    "attributes": {
+      "resolution": "4K",
+      "hdr": "Yes",
+      "windows_hello": "Yes"
+    },
+    "releaseDate": "2023-05-25",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "webcam",
+      "logitech",
+      "4k"
+    ]
+  },
+  {
+    "product_id": "p156",
+    "name": "Razer Kiyo Pro",
+    "brand": "Razer",
+    "category": "Webcams",
+    "price": 199.99,
+    "description": "1080p webcam with adaptive light sensor for streaming.",
+    "search_keywords": "razer kiyo pro webcam 1080p",
+    "attributes": {
+      "resolution": "1080p",
+      "light_sensor": "Yes",
+      "fps": "60"
+    },
+    "releaseDate": "2023-05-26",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "webcam",
+      "razer",
+      "1080p"
+    ]
+  },
+  {
+    "product_id": "p157",
+    "name": "Elgato Stream Deck",
+    "brand": "Elgato",
+    "category": "Accessories",
+    "price": 149.99,
+    "description": "15 customizable LCD keys for streaming control.",
+    "search_keywords": "elgato stream deck accessories",
+    "attributes": {
+      "keys": "15",
+      "connectivity": "USB",
+      "customizable": "Yes"
+    },
+    "releaseDate": "2023-05-27",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "accessories",
+      "elgato",
+      "streaming"
+    ]
+  },
+  {
+    "product_id": "p158",
+    "name": "Blue Yeti X Microphone",
+    "brand": "Blue",
+    "category": "Microphones",
+    "price": 169.99,
+    "description": "USB condenser microphone with 4 pickup patterns.",
+    "search_keywords": "blue yeti x microphone usb",
+    "attributes": {
+      "connectivity": "USB",
+      "patterns": "4",
+      "type": "Condenser"
+    },
+    "releaseDate": "2023-05-28",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "blue",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p159",
+    "name": "Shure SM7B Microphone",
+    "brand": "Shure",
+    "category": "Microphones",
+    "price": 399.99,
+    "description": "Dynamic cardioid microphone for vocals and podcasting.",
+    "search_keywords": "shure sm7b microphone dynamic",
+    "attributes": {
+      "type": "Dynamic",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-05-29",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "microphone",
+      "shure",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p160",
+    "name": "Rode NT1-A Microphone",
+    "brand": "Rode",
+    "category": "Microphones",
+    "price": 229.99,
+    "description": "Condenser microphone with low noise and XLR connection.",
+    "search_keywords": "rode nt1-a microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "self_noise": "5dBA"
+    },
+    "releaseDate": "2023-05-30",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "rode",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p161",
+    "name": "Aston Origin Microphone",
+    "brand": "Aston",
+    "category": "Microphones",
+    "price": 249.99,
+    "description": "Large diaphragm condenser microphone with XLR.",
+    "search_keywords": "aston origin microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-11",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "aston",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p162",
+    "name": "Apogee Duet 3",
+    "brand": "Apogee",
+    "category": "Audio Interfaces",
+    "price": 599.99,
+    "description": "2x4 USB-C audio interface with studio-quality sound.",
+    "search_keywords": "apogee duet 3 audio interface usb",
+    "attributes": {
+      "connectivity": "USB-C",
+      "inputs": "2",
+      "outputs": "4"
+    },
+    "releaseDate": "2023-06-12",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "audio interface",
+      "apogee",
+      "usb-c"
+    ]
+  },
+  {
+    "product_id": "p163",
+    "name": "Behringer UMC404HD",
+    "brand": "Behringer",
+    "category": "Audio Interfaces",
+    "price": 129.99,
+    "description": "4x4 USB audio interface with MIDAS preamps.",
+    "search_keywords": "behringer umc404hd audio interface usb",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "4",
+      "outputs": "4"
+    },
+    "releaseDate": "2023-06-13",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "audio interface",
+      "behringer",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p164",
+    "name": "Mackie Onyx Producer 2.2",
+    "brand": "Mackie",
+    "category": "Audio Interfaces",
+    "price": 149.99,
+    "description": "2x2 USB audio interface with Onyx preamps.",
+    "search_keywords": "mackie onyx producer 2.2 audio interface",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "2",
+      "outputs": "2"
+    },
+    "releaseDate": "2023-06-14",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "audio interface",
+      "mackie",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p165",
+    "name": "Arturia AudioFuse",
+    "brand": "Arturia",
+    "category": "Audio Interfaces",
+    "price": 399.99,
+    "description": "Portable USB audio interface with discrete preamps.",
+    "search_keywords": "arturia audiofuse audio interface usb",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "4",
+      "outputs": "4"
+    },
+    "releaseDate": "2023-06-15",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "audio interface",
+      "arturia",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p166",
+    "name": "Tascam Model 12",
+    "brand": "Tascam",
+    "category": "Mixers",
+    "price": 599.99,
+    "description": "12-channel mixer with USB audio interface and multitrack recording.",
+    "search_keywords": "tascam model 12 mixer usb",
+    "attributes": {
+      "channels": "12",
+      "connectivity": "USB",
+      "recording": "Multitrack"
+    },
+    "releaseDate": "2023-06-16",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "mixer",
+      "tascam",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p167",
+    "name": "Yamaha MG10XU",
+    "brand": "Yamaha",
+    "category": "Mixers",
+    "price": 229.99,
+    "description": "10-channel mixer with USB and SPX effects.",
+    "search_keywords": "yamaha mg10xu mixer usb",
+    "attributes": {
+      "channels": "10",
+      "connectivity": "USB",
+      "effects": "SPX"
+    },
+    "releaseDate": "2023-06-17",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "mixer",
+      "yamaha",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p168",
+    "name": "Behringer Xenyx X1204USB",
+    "brand": "Behringer",
+    "category": "Mixers",
+    "price": 149.99,
+    "description": "12-channel USB mixer with built-in FX.",
+    "search_keywords": "behringer xenyx x1204usb mixer",
+    "attributes": {
+      "channels": "12",
+      "connectivity": "USB",
+      "effects": "Built-in FX"
+    },
+    "releaseDate": "2023-06-18",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "mixer",
+      "behringer",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p169",
+    "name": "Soundcraft Signature 12",
+    "brand": "Soundcraft",
+    "category": "Mixers",
+    "price": 399.99,
+    "description": "12-channel mixer with Ghost preamps and Lexicon effects.",
+    "search_keywords": "soundcraft signature 12 mixer",
+    "attributes": {
+      "channels": "12",
+      "connectivity": "USB",
+      "effects": "Lexicon"
+    },
+    "releaseDate": "2023-06-19",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "mixer",
+      "soundcraft",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p170",
+    "name": "Allen & Heath ZEDi-10FX",
+    "brand": "Allen & Heath",
+    "category": "Mixers",
+    "price": 279.99,
+    "description": "10-channel USB mixer with built-in effects.",
+    "search_keywords": "allen heath zedi-10fx mixer usb",
+    "attributes": {
+      "channels": "10",
+      "connectivity": "USB",
+      "effects": "Built-in FX"
+    },
+    "releaseDate": "2023-06-20",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "mixer",
+      "allen & heath",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p171",
+    "name": "Zoom H5 Handy Recorder",
+    "brand": "Zoom",
+    "category": "Audio Recorders",
+    "price": 279.99,
+    "description": "Portable 4-track recorder with interchangeable microphones.",
+    "search_keywords": "zoom h5 recorder portable",
+    "attributes": {
+      "tracks": "4",
+      "connectivity": "SD Card",
+      "microphone": "Interchangeable"
+    },
+    "releaseDate": "2023-06-21",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "recorder",
+      "zoom",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p172",
+    "name": "Roland R-07 Recorder",
+    "brand": "Roland",
+    "category": "Audio Recorders",
+    "price": 199.99,
+    "description": "Portable recorder with Bluetooth and remote control.",
+    "search_keywords": "roland r-07 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "Bluetooth, SD Card",
+      "remote_control": "Yes"
+    },
+    "releaseDate": "2023-06-22",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "recorder",
+      "roland",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p173",
+    "name": "Sony PCM-D100 Recorder",
+    "brand": "Sony",
+    "category": "Audio Recorders",
+    "price": 799.99,
+    "description": "High-resolution portable recorder with DSD support.",
+    "search_keywords": "sony pcm-d100 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "SD Card",
+      "resolution": "High"
+    },
+    "releaseDate": "2023-06-23",
+    "rating": 4.9,
+    "stock": 50,
+    "tags": [
+      "recorder",
+      "sony",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p174",
+    "name": "Tascam DR-05X Recorder",
+    "brand": "Tascam",
+    "category": "Audio Recorders",
+    "price": 119.99,
+    "description": "Portable stereo recorder with USB audio interface.",
+    "search_keywords": "tascam dr-05x recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "USB, SD Card",
+      "usb_interface": "Yes"
+    },
+    "releaseDate": "2023-06-24",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "recorder",
+      "tascam",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p175",
+    "name": "Olympus LS-P4 Recorder",
+    "brand": "Olympus",
+    "category": "Audio Recorders",
+    "price": 199.99,
+    "description": "Portable recorder with FLAC recording and Bluetooth.",
+    "search_keywords": "olympus ls-p4 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "Bluetooth, SD Card",
+      "format": "FLAC"
+    },
+    "releaseDate": "2023-06-25",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "recorder",
+      "olympus",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p176",
+    "name": "Samson G-Track Pro",
+    "brand": "Samson",
+    "category": "Microphones",
+    "price": 129.99,
+    "description": "USB condenser microphone with built-in audio interface.",
+    "search_keywords": "samson g-track pro microphone usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "patterns": "3"
+    },
+    "releaseDate": "2023-06-01",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "samson",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p177",
+    "name": "Audio-Technica AT2020",
+    "brand": "Audio-Technica",
+    "category": "Microphones",
+    "price": 99.99,
+    "description": "Cardioid condenser microphone for home studios.",
+    "search_keywords": "audio-technica at2020 microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-02",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "microphone",
+      "audio-technica",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p178",
+    "name": "HyperX QuadCast",
+    "brand": "HyperX",
+    "category": "Microphones",
+    "price": 139.99,
+    "description": "USB condenser microphone with RGB lighting for streaming.",
+    "search_keywords": "hyperx quadcast microphone rgb usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "patterns": "4"
+    },
+    "releaseDate": "2023-06-03",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "hyperx",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p179",
+    "name": "Focusrite Scarlett 2i2",
+    "brand": "Focusrite",
+    "category": "Audio Interfaces",
+    "price": 179.99,
+    "description": "2-in/2-out USB audio interface for home recording.",
+    "search_keywords": "focusrite scarlett 2i2 audio interface",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "2",
+      "outputs": "2"
+    },
+    "releaseDate": "2023-06-04",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "audio interface",
+      "focusrite",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p180",
+    "name": "Behringer UMC22",
+    "brand": "Behringer",
+    "category": "Audio Interfaces",
+    "price": 49.99,
+    "description": "2x2 USB audio interface with MIDAS mic preamp.",
+    "search_keywords": "behringer umc22 audio interface usb",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "2",
+      "outputs": "2"
+    },
+    "releaseDate": "2023-06-05",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "audio interface",
+      "behringer",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p181",
+    "name": "PreSonus AudioBox USB 96",
+    "brand": "PreSonus",
+    "category": "Audio Interfaces",
+    "price": 99.99,
+    "description": "2x2 USB audio interface with 24-bit/96kHz resolution.",
+    "search_keywords": "presonus audiobox usb 96 audio interface",
+    "attributes": {
+      "connectivity": "USB",
+      "inputs": "2",
+      "outputs": "2"
+    },
+    "releaseDate": "2023-06-06",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "audio interface",
+      "presonus",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p182",
+    "name": "AKG C214",
+    "brand": "AKG",
+    "category": "Microphones",
+    "price": 399.99,
+    "description": "Large-diaphragm condenser microphone with XLR.",
+    "search_keywords": "akg c214 microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-07",
+    "rating": 4.8,
+    "stock": 60,
+    "tags": [
+      "microphone",
+      "akg",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p183",
+    "name": "Sennheiser e835",
+    "brand": "Sennheiser",
+    "category": "Microphones",
+    "price": 99.99,
+    "description": "Dynamic cardioid vocal microphone with XLR.",
+    "search_keywords": "sennheiser e835 microphone dynamic",
+    "attributes": {
+      "type": "Dynamic",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-08",
+    "rating": 4.8,
+    "stock": 90,
+    "tags": [
+      "microphone",
+      "sennheiser",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p184",
+    "name": "MXL 990",
+    "brand": "MXL",
+    "category": "Microphones",
+    "price": 79.99,
+    "description": "Condenser microphone with vintage design and XLR.",
+    "search_keywords": "mxl 990 microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-09",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "mxl",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p185",
+    "name": "Blue Snowball iCE",
+    "brand": "Blue",
+    "category": "Microphones",
+    "price": 49.99,
+    "description": "USB condenser microphone for podcasts and streaming.",
+    "search_keywords": "blue snowball ice microphone usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "patterns": "1"
+    },
+    "releaseDate": "2023-06-10",
+    "rating": 4.7,
+    "stock": 100,
+    "tags": [
+      "microphone",
+      "blue",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p186",
+    "name": "Zoom H6 Recorder",
+    "brand": "Zoom",
+    "category": "Audio Recorders",
+    "price": 349.99,
+    "description": "Portable 6-track recorder with interchangeable microphones.",
+    "search_keywords": "zoom h6 recorder portable",
+    "attributes": {
+      "tracks": "6",
+      "connectivity": "SD Card",
+      "microphone": "Interchangeable"
+    },
+    "releaseDate": "2023-06-11",
+    "rating": 4.8,
+    "stock": 50,
+    "tags": [
+      "recorder",
+      "zoom",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p187",
+    "name": "Tascam DR-40X Recorder",
+    "brand": "Tascam",
+    "category": "Audio Recorders",
+    "price": 199.99,
+    "description": "Portable 4-track recorder with XLR inputs.",
+    "search_keywords": "tascam dr-40x recorder portable",
+    "attributes": {
+      "tracks": "4",
+      "connectivity": "XLR",
+      "storage": "SD Card"
+    },
+    "releaseDate": "2023-06-12",
+    "rating": 4.7,
+    "stock": 60,
+    "tags": [
+      "recorder",
+      "tascam",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p188",
+    "name": "Olympus WS-853 Recorder",
+    "brand": "Olympus",
+    "category": "Audio Recorders",
+    "price": 79.99,
+    "description": "Digital voice recorder with noise cancellation.",
+    "search_keywords": "olympus ws-853 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "USB",
+      "battery_life": "110 hours"
+    },
+    "releaseDate": "2023-06-13",
+    "rating": 4.6,
+    "stock": 80,
+    "tags": [
+      "recorder",
+      "olympus",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p189",
+    "name": "Sony ICD-PX370 Recorder",
+    "brand": "Sony",
+    "category": "Audio Recorders",
+    "price": 59.99,
+    "description": "Digital voice recorder with microSD slot.",
+    "search_keywords": "sony icd-px370 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "USB, microSD",
+      "battery_life": "57 hours"
+    },
+    "releaseDate": "2023-06-14",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "recorder",
+      "sony",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p190",
+    "name": "Roland R-07 Recorder",
+    "brand": "Roland",
+    "category": "Audio Recorders",
+    "price": 199.99,
+    "description": "Portable recorder with Bluetooth and remote control.",
+    "search_keywords": "roland r-07 recorder portable",
+    "attributes": {
+      "tracks": "2",
+      "connectivity": "Bluetooth, SD Card",
+      "remote_control": "Yes"
+    },
+    "releaseDate": "2023-06-15",
+    "rating": 4.7,
+    "stock": 70,
+    "tags": [
+      "recorder",
+      "roland",
+      "portable"
+    ]
+  },
+  {
+    "product_id": "p191",
+    "name": "Behringer C-1 Microphone",
+    "brand": "Behringer",
+    "category": "Microphones",
+    "price": 49.99,
+    "description": "Condenser microphone with XLR for home studios.",
+    "search_keywords": "behringer c-1 microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-16",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "microphone",
+      "behringer",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p192",
+    "name": "AKG P220 Microphone",
+    "brand": "AKG",
+    "category": "Microphones",
+    "price": 149.99,
+    "description": "Large diaphragm condenser microphone with XLR.",
+    "search_keywords": "akg p220 microphone condenser",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-17",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "akg",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p193",
+    "name": "Rode NT-USB Mini",
+    "brand": "Rode",
+    "category": "Microphones",
+    "price": 99.99,
+    "description": "USB condenser microphone for podcasts and streaming.",
+    "search_keywords": "rode nt-usb mini microphone",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-18",
+    "rating": 4.8,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "rode",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p194",
+    "name": "Samson Q2U Microphone",
+    "brand": "Samson",
+    "category": "Microphones",
+    "price": 69.99,
+    "description": "Dynamic USB/XLR microphone for podcasts and live sound.",
+    "search_keywords": "samson q2u microphone dynamic",
+    "attributes": {
+      "type": "Dynamic",
+      "connectivity": "USB, XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-19",
+    "rating": 4.7,
+    "stock": 90,
+    "tags": [
+      "microphone",
+      "samson",
+      "usb",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p195",
+    "name": "Shure MV7 Microphone",
+    "brand": "Shure",
+    "category": "Microphones",
+    "price": 249.99,
+    "description": "USB/XLR dynamic microphone for podcasts and vocals.",
+    "search_keywords": "shure mv7 microphone dynamic",
+    "attributes": {
+      "type": "Dynamic",
+      "connectivity": "USB, XLR",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-20",
+    "rating": 4.9,
+    "stock": 60,
+    "tags": [
+      "microphone",
+      "shure",
+      "usb",
+      "xlr"
+    ]
+  },
+  {
+    "product_id": "p196",
+    "name": "Audio-Technica AT2020 USB+",
+    "brand": "Audio-Technica",
+    "category": "Microphones",
+    "price": 149.99,
+    "description": "USB condenser microphone with cardioid polar pattern for home recording.",
+    "search_keywords": "audio-technica at2020 usb microphone",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-21",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "audio-technica",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p197",
+    "name": "Blue Yeti Nano",
+    "brand": "Blue",
+    "category": "Microphones",
+    "price": 99.99,
+    "description": "Compact USB condenser microphone with multiple pickup patterns.",
+    "search_keywords": "blue yeti nano microphone usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "patterns": "2"
+    },
+    "releaseDate": "2023-06-22",
+    "rating": 4.7,
+    "stock": 80,
+    "tags": [
+      "microphone",
+      "blue",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p198",
+    "name": "HyperX SoloCast",
+    "brand": "HyperX",
+    "category": "Microphones",
+    "price": 59.99,
+    "description": "USB condenser microphone for gaming and streaming.",
+    "search_keywords": "hyperx solocast microphone usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "polar_pattern": "Cardioid"
+    },
+    "releaseDate": "2023-06-23",
+    "rating": 4.6,
+    "stock": 90,
+    "tags": [
+      "microphone",
+      "hyperx",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p199",
+    "name": "Elgato Wave:3",
+    "brand": "Elgato",
+    "category": "Microphones",
+    "price": 159.99,
+    "description": "USB condenser microphone with Clipguard technology.",
+    "search_keywords": "elgato wave 3 microphone usb",
+    "attributes": {
+      "type": "Condenser",
+      "connectivity": "USB",
+      "technology": "Clipguard"
+    },
+    "releaseDate": "2023-06-24",
+    "rating": 4.8,
+    "stock": 70,
+    "tags": [
+      "microphone",
+      "elgato",
+      "usb"
+    ]
+  },
+  {
+    "product_id": "p200",
+    "name": "Tascam DR-40X Recorder",
+    "brand": "Tascam",
+    "category": "Audio Recorders",
+    "price": 199.99,
+    "description": "Portable 4-track recorder with XLR inputs.",
+    "search_keywords": "tascam dr-40x recorder portable",
+    "attributes": {
+      "tracks": "4",
+      "connectivity": "XLR",
+      "storage": "SD Card"
+    },
+    "releaseDate": "2023-06-25",
+    "rating": 4.7,
+    "stock": 60,
+    "tags": [
+      "recorder",
+      "tascam",
+      "portable"
+    ]
+  }
+]
+
+

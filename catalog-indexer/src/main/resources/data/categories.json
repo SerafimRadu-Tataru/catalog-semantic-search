@@ -1,0 +1,126 @@
+[
+    {
+        "category_id": "cat1",
+        "category_name": "Accessories"
+    },
+    {
+        "category_id": "cat2",
+        "category_name": "Audio Equipment"
+    },
+    {
+        "category_id": "cat3",
+        "category_name": "Audio Interfaces"
+    },
+    {
+        "category_id": "cat4",
+        "category_name": "Audio Recorders"
+    },
+    {
+        "category_id": "cat5",
+        "category_name": "Cameras"
+    },
+    {
+        "category_id": "cat6",
+        "category_name": "Cases"
+    },
+    {
+        "category_id": "cat7",
+        "category_name": "Components"
+    },
+    {
+        "category_id": "cat8",
+        "category_name": "Cooling"
+    },
+    {
+        "category_id": "cat9",
+        "category_name": "Drones"
+    },
+    {
+        "category_id": "cat10",
+        "category_name": "E-readers"
+    },
+    {
+        "category_id": "cat11",
+        "category_name": "Fitness Equipment"
+    },
+    {
+        "category_id": "cat12",
+        "category_name": "Gaming Consoles"
+    },
+    {
+        "category_id": "cat13",
+        "category_name": "Headphones"
+    },
+    {
+        "category_id": "cat14",
+        "category_name": "Laptops"
+    },
+    {
+        "category_id": "cat15",
+        "category_name": "Memory"
+    },
+    {
+        "category_id": "cat16",
+        "category_name": "Microphones"
+    },
+    {
+        "category_id": "cat17",
+        "category_name": "Mixers"
+    },
+    {
+        "category_id": "cat18",
+        "category_name": "Monitors"
+    },
+    {
+        "category_id": "cat19",
+        "category_name": "Networking"
+    },
+    {
+        "category_id": "cat20",
+        "category_name": "Power Supplies"
+    },
+    {
+        "category_id": "cat21",
+        "category_name": "Printers"
+    },
+    {
+        "category_id": "cat22",
+        "category_name": "Smart Home Devices"
+    },
+    {
+        "category_id": "cat23",
+        "category_name": "Smartphones"
+    },
+    {
+        "category_id": "cat24",
+        "category_name": "Smartwatches"
+    },
+    {
+        "category_id": "cat25",
+        "category_name": "Speakers"
+    },
+    {
+        "category_id": "cat26",
+        "category_name": "Storage"
+    },
+    {
+        "category_id": "cat27",
+        "category_name": "Streaming Devices"
+    },
+    {
+        "category_id": "cat28",
+        "category_name": "Tablets"
+    },
+    {
+        "category_id": "cat29",
+        "category_name": "Televisions"
+    },
+    {
+        "category_id": "cat30",
+        "category_name": "Virtual Reality"
+    },
+    {
+        "category_id": "cat31",
+        "category_name": "Webcams"
+    }
+]

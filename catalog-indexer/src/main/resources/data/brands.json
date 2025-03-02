@@ -1,0 +1,450 @@
+[
+    {
+        "brand_id": "b1",
+        "brand_name": "AKG"
+    },
+    {
+        "brand_id": "b2",
+        "brand_name": "AMD"
+    },
+    {
+        "brand_id": "b3",
+        "brand_name": "ASUS"
+    },
+    {
+        "brand_id": "b4",
+        "brand_name": "ASUSTek Computer Inc."
+    },
+    {
+        "brand_id": "b5",
+        "brand_name": "Acer"
+    },
+    {
+        "brand_id": "b6",
+        "brand_name": "Akai Professional"
+    },
+    {
+        "brand_id": "b7",
+        "brand_name": "Allen & Heath"
+    },
+    {
+        "brand_id": "b8",
+        "brand_name": "Amazon"
+    },
+    {
+        "brand_id": "b9",
+        "brand_name": "Anker"
+    },
+    {
+        "brand_id": "b10",
+        "brand_name": "Apogee"
+    },
+    {
+        "brand_id": "b11",
+        "brand_name": "Apple"
+    },
+    {
+        "brand_id": "b12",
+        "brand_name": "Apple Inc."
+    },
+    {
+        "brand_id": "b13",
+        "brand_name": "Arturia"
+    },
+    {
+        "brand_id": "b14",
+        "brand_name": "Aston"
+    },
+    {
+        "brand_id": "b15",
+        "brand_name": "Audio-Technica"
+    },
+    {
+        "brand_id": "b16",
+        "brand_name": "Bang & Olufsen"
+    },
+    {
+        "brand_id": "b17",
+        "brand_name": "Beats Electronics"
+    },
+    {
+        "brand_id": "b18",
+        "brand_name": "Behringer"
+    },
+    {
+        "brand_id": "b19",
+        "brand_name": "BenQ"
+    },
+    {
+        "brand_id": "b20",
+        "brand_name": "Beyerdynamic"
+    },
+    {
+        "brand_id": "b21",
+        "brand_name": "Black Shark"
+    },
+    {
+        "brand_id": "b22",
+        "brand_name": "Blue"
+    },
+    {
+        "brand_id": "b23",
+        "brand_name": "Blue Microphones"
+    },
+    {
+        "brand_id": "b24",
+        "brand_name": "Bose"
+    },
+    {
+        "brand_id": "b25",
+        "brand_name": "Bose Corporation"
+    },
+    {
+        "brand_id": "b26",
+        "brand_name": "Canon"
+    },
+    {
+        "brand_id": "b27",
+        "brand_name": "Canon Inc."
+    },
+    {
+        "brand_id": "b28",
+        "brand_name": "Corsair"
+    },
+    {
+        "brand_id": "b29",
+        "brand_name": "Corsair Gaming"
+    },
+    {
+        "brand_id": "b30",
+        "brand_name": "Crucial"
+    },
+    {
+        "brand_id": "b31",
+        "brand_name": "DJI"
+    },
+    {
+        "brand_id": "b32",
+        "brand_name": "Dell"
+    },
+    {
+        "brand_id": "b33",
+        "brand_name": "Dell Inc."
+    },
+    {
+        "brand_id": "b34",
+        "brand_name": "EVGA"
+    },
+    {
+        "brand_id": "b35",
+        "brand_name": "Elgato"
+    },
+    {
+        "brand_id": "b36",
+        "brand_name": "Fitbit"
+    },
+    {
+        "brand_id": "b37",
+        "brand_name": "Focusrite"
+    },
+    {
+        "brand_id": "b38",
+        "brand_name": "Fractal Design"
+    },
+    {
+        "brand_id": "b39",
+        "brand_name": "G.Skill"
+    },
+    {
+        "brand_id": "b40",
+        "brand_name": "Garmin Ltd."
+    },
+    {
+        "brand_id": "b41",
+        "brand_name": "GoPro"
+    },
+    {
+        "brand_id": "b42",
+        "brand_name": "GoPro Inc."
+    },
+    {
+        "brand_id": "b43",
+        "brand_name": "Google"
+    },
+    {
+        "brand_id": "b44",
+        "brand_name": "HP Inc."
+    },
+    {
+        "brand_id": "b45",
+        "brand_name": "Harman Kardon"
+    },
+    {
+        "brand_id": "b46",
+        "brand_name": "Honor"
+    },
+    {
+        "brand_id": "b47",
+        "brand_name": "HyperX"
+    },
+    {
+        "brand_id": "b48",
+        "brand_name": "Intel Corporation"
+    },
+    {
+        "brand_id": "b49",
+        "brand_name": "JBL"
+    },
+    {
+        "brand_id": "b50",
+        "brand_name": "Jabra"
+    },
+    {
+        "brand_id": "b51",
+        "brand_name": "KRK"
+    },
+    {
+        "brand_id": "b52",
+        "brand_name": "Kingston"
+    },
+    {
+        "brand_id": "b53",
+        "brand_name": "Klipsch"
+    },
+    {
+        "brand_id": "b54",
+        "brand_name": "LG"
+    },
+    {
+        "brand_id": "b55",
+        "brand_name": "LG Electronics"
+    },
+    {
+        "brand_id": "b56",
+        "brand_name": "Lenovo"
+    },
+    {
+        "brand_id": "b57",
+        "brand_name": "Logitech"
+    },
+    {
+        "brand_id": "b58",
+        "brand_name": "M-Audio"
+    },
+    {
+        "brand_id": "b59",
+        "brand_name": "MSI"
+    },
+    {
+        "brand_id": "b60",
+        "brand_name": "MXL"
+    },
+    {
+        "brand_id": "b61",
+        "brand_name": "Mackie"
+    },
+    {
+        "brand_id": "b62",
+        "brand_name": "Marshall"
+    },
+    {
+        "brand_id": "b63",
+        "brand_name": "Meta"
+    },
+    {
+        "brand_id": "b64",
+        "brand_name": "Microsoft"
+    },
+    {
+        "brand_id": "b65",
+        "brand_name": "Microsoft Corporation"
+    },
+    {
+        "brand_id": "b66",
+        "brand_name": "Motorola"
+    },
+    {
+        "brand_id": "b67",
+        "brand_name": "NVIDIA Corporation"
+    },
+    {
+        "brand_id": "b68",
+        "brand_name": "NZXT"
+    },
+    {
+        "brand_id": "b69",
+        "brand_name": "Netgear"
+    },
+    {
+        "brand_id": "b70",
+        "brand_name": "Nikon"
+    },
+    {
+        "brand_id": "b71",
+        "brand_name": "Nikon Corporation"
+    },
+    {
+        "brand_id": "b72",
+        "brand_name": "Nintendo"
+    },
+    {
+        "brand_id": "b73",
+        "brand_name": "Noctua"
+    },
+    {
+        "brand_id": "b74",
+        "brand_name": "Nokia"
+    },
+    {
+        "brand_id": "b75",
+        "brand_name": "Olympus"
+    },
+    {
+        "brand_id": "b76",
+        "brand_name": "OnePlus"
+    },
+    {
+        "brand_id": "b77",
+        "brand_name": "Oppo"
+    },
+    {
+        "brand_id": "b78",
+        "brand_name": "Panasonic"
+    },
+    {
+        "brand_id": "b79",
+        "brand_name": "Philips"
+    },
+    {
+        "brand_id": "b80",
+        "brand_name": "PreSonus"
+    },
+    {
+        "brand_id": "b81",
+        "brand_name": "Razer"
+    },
+    {
+        "brand_id": "b82",
+        "brand_name": "Razer Inc."
+    },
+    {
+        "brand_id": "b83",
+        "brand_name": "Realme"
+    },
+    {
+        "brand_id": "b84",
+        "brand_name": "Ring"
+    },
+    {
+        "brand_id": "b85",
+        "brand_name": "Rode"
+    },
+    {
+        "brand_id": "b86",
+        "brand_name": "Roku"
+    },
+    {
+        "brand_id": "b87",
+        "brand_name": "Roland"
+    },
+    {
+        "brand_id": "b88",
+        "brand_name": "R\u00d8DE"
+    },
+    {
+        "brand_id": "b89",
+        "brand_name": "Samson"
+    },
+    {
+        "brand_id": "b90",
+        "brand_name": "Samsung"
+    },
+    {
+        "brand_id": "b91",
+        "brand_name": "Samsung Electronics"
+    },
+    {
+        "brand_id": "b92",
+        "brand_name": "SanDisk"
+    },
+    {
+        "brand_id": "b93",
+        "brand_name": "Seagate Technology"
+    },
+    {
+        "brand_id": "b94",
+        "brand_name": "Sennheiser"
+    },
+    {
+        "brand_id": "b95",
+        "brand_name": "Shure"
+    },
+    {
+        "brand_id": "b96",
+        "brand_name": "Sonos"
+    },
+    {
+        "brand_id": "b97",
+        "brand_name": "Sony"
+    },
+    {
+        "brand_id": "b98",
+        "brand_name": "Sony Corporation"
+    },
+    {
+        "brand_id": "b99",
+        "brand_name": "Soundcraft"
+    },
+    {
+        "brand_id": "b100",
+        "brand_name": "SteelSeries"
+    },
+    {
+        "brand_id": "b101",
+        "brand_name": "Synology"
+    },
+    {
+        "brand_id": "b102",
+        "brand_name": "TCL"
+    },
+    {
+        "brand_id": "b103",
+        "brand_name": "TP-Link"
+    },
+    {
+        "brand_id": "b104",
+        "brand_name": "Tascam"
+    },
+    {
+        "brand_id": "b105",
+        "brand_name": "Ubiquiti"
+    },
+    {
+        "brand_id": "b106",
+        "brand_name": "Ultimate Ears"
+    },
+    {
+        "brand_id": "b107",
+        "brand_name": "Vivo"
+    },
+    {
+        "brand_id": "b108",
+        "brand_name": "Vizio"
+    },
+    {
+        "brand_id": "b109",
+        "brand_name": "Western Digital"
+    },
+    {
+        "brand_id": "b110",
+        "brand_name": "Xiaomi"
+    },
+    {
+        "brand_id": "b111",
+        "brand_name": "Yamaha"
+    },
+    {
+        "brand_id": "b112",
+        "brand_name": "Zoom"
+    }
+]
