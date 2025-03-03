@@ -6,7 +6,14 @@
       "analysis": {
         "analyzer": {
           "standard_analyzer": {
-            "type": "standard"
+            "type": "standard",
+            "filter": ["lowercase"]
+          }
+        },
+        "normalizer": {
+          "lowercase_normalizer": {
+            "type": "custom",
+            "filter": ["lowercase"]
           }
         }
       }
@@ -14,11 +21,12 @@
   },
   "mappings": {
     "properties": {
-      "tag": { "type": "keyword" },
-      "field": { "type": "keyword" },
-      "type": { "type": "keyword" },
-      "source_id": { "type": "keyword" },
-      "weight": { "type": "float" }
+      "tag": { "type": "keyword", "normalizer": "lowercase_normalizer" },
+      "field": { "type": "keyword", "normalizer": "lowercase_normalizer" },
+      "type": { "type": "keyword", "normalizer": "lowercase_normalizer" },
+      "source_id": { "type": "keyword", "normalizer": "lowercase_normalizer" },
+      "weight": { "type": "float" },
+      "attributes": { "type": "object", "dynamic": true }
     }
   }
 }

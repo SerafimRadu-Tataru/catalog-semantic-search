@@ -1,6 +1,5 @@
 package com.sradutataru.search.catalog.service.controller;
 
-import com.sradutataru.search.catalog.service.dto.ProductDto;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,6 +17,24 @@ import java.util.Map;
 
 @Api(value = "Product API", tags = {"Products"})
 public interface ProductControllerInterface {
+
+    @ApiOperation(value = "Keyword search",
+            notes = "Performs a simple keyword search across product name, description, and searchKeywords fields.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successfully retrieved products", response = ProductResponse.class),
+            @ApiResponse(code = 400, message = "Invalid input provided"),
+            @ApiResponse(code = 500, message = "Internal server error")
+    })
+    ResponseEntity<ProductResponse> keywordSearch(
+            @ApiParam(value = "Search keyword", required = true, example = "wireless earbuds")
+            @RequestParam String q,
+            @ApiParam(value = "Number of results per page", required = true, example = "10")
+            @RequestParam Integer count,
+            @ApiParam(value = "Page number, starts at 1", required = true, example = "1")
+            @RequestParam Integer page,
+            @ApiParam(value = "Additional attribute filters. Keys must be prefixed with 'attributes.' (e.g., attributes.color=black)", required = false)
+            @RequestParam Map<String, String> allParams);
+
     @ApiOperation(value = "Perform semantic search",
             notes = "This endpoint returns a list of products that semantically match the provided query. " +
                     "Use 'q' for the search term, 'count' for the number of results per page, 'page' for the page number, " +

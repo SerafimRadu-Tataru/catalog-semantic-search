@@ -1,0 +1,51 @@
+{
+  "stages": [
+    {
+      "name": "keyword match",
+      "fields": {
+        "name.concept": 25,
+        "search_keywords.concept": 25,
+        "brand_name.concept": 30,
+        "category_name.concept": 20
+      },
+      "dynamic_fields": {
+        "attributes.*": 1.5
+      },
+      "minMatchPercent": 1.0
+    },
+    {
+      "name": "text match",
+      "fields": {
+        "name.concept": 25,
+        "name.text": 20,
+        "name.shingle": 18,
+        "search_keywords.concept": 25,
+        "search_keywords.text": 20,
+        "search_keywords.shingle": 18,
+        "brand_name.concept": 30,
+        "category_name.concept": 20
+      },
+      "dynamic_fields": {
+        "attributes.*": 15
+      },
+      "minMatchPercent": 1.0
+    },
+    {
+      "name": "partial match",
+      "fields": {
+        "name.concept": 25,
+        "name.text": 20,
+        "name.shingle": 18,
+        "search_keywords.concept": 25,
+        "search_keywords.text": 20,
+        "search_keywords.shingle": 18,
+        "brand_name.concept": 30,
+        "category_name.concept": 20
+      },
+      "dynamic_fields": {
+        "attributes.*": 15
+      },
+      "minMatchPercent": 0.5
+    }
+  ]
+}

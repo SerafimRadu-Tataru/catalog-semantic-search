@@ -4,10 +4,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sradutataru.search.catalog.service.dto.ProductDto;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
+import com.sradutataru.search.catalog.service.service.SemanticService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -22,31 +23,60 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import static org.elasticsearch.client.RequestOptions.DEFAULT;
+
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ProductService {
 
     private static final String INDEX = "catalog-index_live";
-
     private final RestHighLevelClient client;
     private final ObjectMapper objectMapper;
+    private final SemanticService semanticService;
 
-    public ProductResponse semanticSearch(String query, Integer count, Integer page, Map<String, String> attributes) {
+    public ProductResponse keywordSearch(String query, Integer count, Integer page, Map<String, String> attributes) {
         List<ProductDto> products = new ArrayList<>();
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
+                .must(QueryBuilders.multiMatchQuery(query, "name", "description", "searchKeywords"));
+
+        if (attributes != null && !attributes.isEmpty()) {
+            attributes.forEach((attrKey, attrValue) ->
+                    boolQuery.filter(QueryBuilders.termQuery(attrKey, attrValue))
+            );
+        }
+
+        return getProductResponse(query, count, page, attributes, products, boolQuery);
+    }
+
+    public ProductResponse semanticSearchV1(String query, Integer count, Integer page, Map<String, String> attributes) {
+        List<ProductDto> products = new ArrayList<>();
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
+                .must(QueryBuilders.moreLikeThisQuery(
+                                new String[]{"name", "description", "searchKeywords"},
+                                new String[]{query},
+                                null)
+                        .minTermFreq(1)
+                        .minDocFreq(1)
+                );
+        if (attributes != null && !attributes.isEmpty()) {
+            attributes.forEach((key, value) -> boolQuery.filter(QueryBuilders.termQuery(key, value)));
+        }
+
+        return getProductResponse(query, count, page, attributes, products, boolQuery);
+    }
+
+    public ProductResponse semanticSearchV2(String query, Integer count, Integer page, Map<String, String> attributes) {
+        ProductResponse semanticSearch = semanticService.semanticSearch(query, count, page, attributes);
+        if(semanticSearch == null) {
+            return keywordSearch(query, count, page, attributes);
+        }
+        return semanticSearch;
+    }
+
+    private ProductResponse getProductResponse(String query, Integer count, Integer page, Map<String, String> attributes,
+                                               List<ProductDto> products, BoolQueryBuilder boolQuery) {
         try {
-            BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
-                    .must(QueryBuilders.moreLikeThisQuery(
-                                    new String[]{"name", "description", "searchKeywords"},
-                                    new String[]{query},
-                                    null)
-                            .minTermFreq(1)
-                            .minDocFreq(1)
-                    );
-
-            if (attributes != null && !attributes.isEmpty()) {
-                attributes.forEach((key, value) -> boolQuery.filter(QueryBuilders.termQuery(key, value)));
-            }
-
             SearchSourceBuilder sourceBuilder = new SearchSourceBuilder()
                     .query(boolQuery)
                     .size(count)
@@ -55,14 +85,14 @@ public class ProductService {
             SearchRequest searchRequest = new SearchRequest(INDEX);
             searchRequest.source(sourceBuilder);
 
-            SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
+            SearchResponse response = client.search(searchRequest, DEFAULT);
 
             long numFound = response.getHits().getTotalHits().value;
             for (SearchHit hit : response.getHits().getHits()) {
                 ProductDto product = objectMapper.readValue(hit.getSourceAsString(), ProductDto.class);
                 products.add(product);
             }
-            return new ProductResponse(query, numFound, attributes, products, count, page);
+            return new ProductResponse(query, numFound, attributes, products, count, page, null);
         } catch (IOException e) {
             throw new RuntimeException("Failed to perform semantic search", e);
         }
@@ -83,7 +113,7 @@ public class ProductService {
             SearchRequest searchRequest = new SearchRequest(INDEX);
             searchRequest.source(sourceBuilder);
 
-            SearchResponse response = client.search(searchRequest, RequestOptions.DEFAULT);
+            SearchResponse response = client.search(searchRequest, DEFAULT);
 
             for (SearchHit hit : response.getHits().getHits()) {
                 JsonNode node = objectMapper.readTree(hit.getSourceAsString());
@@ -109,4 +139,8 @@ public class ProductService {
         }
         return boolQuery;
     }
+
+
+
+
 }

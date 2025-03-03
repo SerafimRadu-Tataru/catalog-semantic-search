@@ -1,13 +1,7 @@
 package com.sradutataru.search.catalog.service.controller;
 
 import com.sradutataru.search.catalog.service.ProductService;
-import com.sradutataru.search.catalog.service.dto.ProductDto;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
 
@@ -28,6 +21,17 @@ public class ProductController implements ProductControllerInterface {
 
     private final ProductService productService;
 
+
+    @GetMapping("/keyword-search")
+    @Override
+    public ResponseEntity<ProductResponse> keywordSearch(
+            @RequestParam String q,
+            @RequestParam(required = false, defaultValue = "10") Integer count,
+            @RequestParam(required = false, defaultValue = "1") Integer page,
+            @RequestParam Map<String, String> allParams) {
+        return ResponseEntity.ok(productService.keywordSearch(q, count, page, extractAttributes(allParams)));
+    }
+
     @Override
     @GetMapping("/semantic-search")
     public ResponseEntity<ProductResponse> semanticSearch(
@@ -36,7 +40,7 @@ public class ProductController implements ProductControllerInterface {
             @RequestParam(required = false, defaultValue = "1") Integer page,
             @RequestParam Map<String, String> allParams
     ) {
-        ProductResponse products = productService.semanticSearch(q, count, page, extractAttributes(allParams));
+        ProductResponse products = productService.semanticSearchV2(q, count, page, extractAttributes(allParams));
         return ResponseEntity.ok(products);
     }
 

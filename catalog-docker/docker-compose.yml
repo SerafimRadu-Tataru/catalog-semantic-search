@@ -97,7 +97,7 @@ services:
     volumes:
       - ./src/main/resources/elasticsearch/config:/config
     command: >
-      sh -c "sleep 10 &&
+      sh -c "sleep 2 &&
       echo 'Deleting existing indices if they exist...' &&
       curl -u elastic:ElasticRocks! -X DELETE 'http://elasticsearch:9200/catalog-index_a' &&
       curl -u elastic:ElasticRocks! -X DELETE 'http://elasticsearch:9200/catalog-index_b' &&

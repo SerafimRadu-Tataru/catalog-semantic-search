@@ -50,7 +50,17 @@ public class TagService {
             if (TRUE.equals(entry.getValue().get("asMap"))) {
                 for (Row row : rows) {
                     Object fieldValue = row.getAs(field);
-                    if (fieldValue instanceof Map) {
+                    if (fieldValue instanceof Row) {
+                        Row mapRow = (Row) fieldValue;
+                        Map<String, String> attributesMap = new HashMap<>();
+                        for (String fieldName : mapRow.schema().fieldNames()) {
+                            Object value = mapRow.getAs(fieldName);
+                            if (value != null) {
+                                attributesMap.put(fieldName, value.toString());
+                            }
+                        }
+                        allTags.addAll(updateFieldSemanticTags(field, attributesMap));
+                    } else if (fieldValue instanceof Map) {
                         allTags.addAll(updateFieldSemanticTags(field, (Map<String, String>) fieldValue));
                     }
                 }
@@ -116,24 +126,6 @@ public class TagService {
         if (TRUE.equals(tagConfig.get(configName).get("text"))) {
             docs.addAll(indexTextTags(fieldValue, fieldName));
         }
-        if (TRUE.equals(tagConfig.get(configName).get("shingle"))) {
-            docs.addAll(indexShingleTags(fieldValue, fieldName));
-        }
-        return docs;
-    }
-
-    private List<Map<String, Object>> indexShingleTags(String fieldValue, String fieldName) {
-        List<Map<String, Object>> docs = new ArrayList<>();
-        List<String> words = asList(fieldValue.toLowerCase().split("\\s+"));
-        int wordCount = words.size();
-        for (int n = 2; n <= 5; n++) {
-            if (wordCount >= n) {
-                for (int i = 0; i <= wordCount - n; i++) {
-                    String shingle = String.join(" ", words.subList(i, i + n));
-                    docs.add(indexOrUpdateSemanticTag(shingle, fieldName, "shingle"));
-                }
-            }
-        }
         return docs;
     }
 
@@ -153,7 +145,7 @@ public class TagService {
     private Map<String, Object> indexOrUpdateSemanticTag(String tag, String field, String tagType) {
             String tagKey = tag.toLowerCase() + "_" + field + "_" + tagType;
             Map<String, Object> doc = new HashMap<>();
-            doc.put("tag", tag.toLowerCase());
+            doc.put("tag", tag);
             doc.put("field", field);
             doc.put("type", tagType);
             doc.put("weight", "1");
@@ -163,8 +155,7 @@ public class TagService {
 
     private Map<String, Map<String, Boolean>> loadTagConfig() {
         try (InputStream is = TagService.class.getResourceAsStream("/tag-config.json")) {
-            return new ObjectMapper().readValue(is, new TypeReference<>() {
-            });
+            return new ObjectMapper().readValue(is, new TypeReference<>() {});
         } catch (Exception e) {
             throw new RuntimeException("Failed to load tag configuration", e);
         }

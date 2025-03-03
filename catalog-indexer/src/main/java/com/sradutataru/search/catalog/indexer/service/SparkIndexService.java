@@ -47,6 +47,7 @@ import static org.elasticsearch.common.xcontent.XContentType.JSON;
 public class SparkIndexService {
 
     private static final String CATALOG_INDEX = "catalog-index";
+    private static final String TAGS_INDEX = "semantic-tags";
     private static final String PREVIEW = "_preview";
     public static final String PREVIEW_ALIAS = CATALOG_INDEX + PREVIEW;
     private static final String LIVE = "_live";
@@ -60,7 +61,8 @@ public class SparkIndexService {
     @Async
     public void indexAllDataAsync() {
         try {
-            cleanIndex();
+            cleanIndex(PREVIEW_ALIAS);
+            cleanIndex(TAGS_INDEX);
 
             Dataset<Row> brandsDF = loadJsonDataset("data/brands.json");
             Dataset<Row> categoriesDF = loadJsonDataset("data/categories.json");
@@ -144,12 +146,12 @@ public class SparkIndexService {
         }
     }
 
-    private void cleanIndex() {
+    private void cleanIndex(String collection) {
         try {
-            DeleteByQueryRequest request = new DeleteByQueryRequest(PREVIEW_ALIAS);
+            DeleteByQueryRequest request = new DeleteByQueryRequest(collection);
             request.setQuery(QueryBuilders.matchAllQuery());
             restHighLevelClient.deleteByQuery(request, RequestOptions.DEFAULT);
-            System.out.println("Cleaned index: " + PREVIEW_ALIAS);
+            System.out.println("Cleaned index: " + collection);
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to clean index", e);

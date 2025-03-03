@@ -23,19 +23,26 @@
           "output_unigrams": true
         }
       },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": ["lowercase"]
+        }
+      },
       "analyzer": {
         "edge_ngram_analyzer": {
           "type": "custom",
           "tokenizer": "edge_ngram_tokenizer",
-          "filter": ["lowercase"]
+          "filter": ["lowercase", "stemmer"]
         },
         "shingle_analyzer": {
           "type": "custom",
           "tokenizer": "shingle_tokenizer",
-          "filter": ["lowercase", "shingle_filter"]
+          "filter": ["lowercase", "stemmer", "shingle_filter"]
         },
         "text_analyzer": {
-          "type": "standard"
+          "type": "standard",
+          "filter": ["lowercase", "stemmer"]
         }
       }
     }
@@ -46,6 +53,16 @@
         "strings_as_keyword": {
           "match_mapping_type": "string",
           "mapping": { "type": "keyword" }
+        }
+      },
+      {
+        "attributes_normalizer": {
+          "match_mapping_type": "string",
+          "path_match": "attributes.*",
+          "mapping": {
+            "type": "keyword",
+            "normalizer": "lowercase_normalizer"
+          }
         }
       }
     ],
@@ -58,7 +75,7 @@
         "fields": {
           "text": { "type": "text", "analyzer": "text_analyzer" },
           "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
-          "concept": { "type": "keyword" }
+          "concept": { "type": "keyword", "normalizer": "lowercase_normalizer" }
         }
       },
       "brand_name": {
@@ -66,7 +83,7 @@
         "fields": {
           "text": { "type": "text", "analyzer": "text_analyzer" },
           "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
-          "concept": { "type": "keyword" }
+          "concept": { "type": "keyword", "normalizer": "lowercase_normalizer" }
         }
       },
       "category_name": {
@@ -74,7 +91,7 @@
         "fields": {
           "text": { "type": "text", "analyzer": "text_analyzer" },
           "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
-          "concept": { "type": "keyword" }
+          "concept": { "type": "keyword", "normalizer": "lowercase_normalizer" }
         }
       },
       "price": { "type": "float" },
@@ -86,10 +103,13 @@
         "fields": {
           "text": { "type": "text", "analyzer": "text_analyzer" },
           "shingle": { "type": "text", "analyzer": "shingle_analyzer" },
-          "concept": { "type": "keyword" }
+          "concept": { "type": "keyword", "normalizer": "lowercase_normalizer" }
         }
       },
-      "attributes": { "type": "object", "dynamic": true },
+      "attributes": {
+        "type": "object",
+        "dynamic": true
+      },
       "releaseDate": { "type": "date" },
       "rating": { "type": "float" },
       "stock": { "type": "integer" },

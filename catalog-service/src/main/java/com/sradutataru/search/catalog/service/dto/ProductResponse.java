@@ -1,5 +1,6 @@
 package com.sradutataru.search.catalog.service.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @Schema(description = "Response for product search containing query, products, count, and page information.")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductResponse {
 
     @Schema(description = "Search query string", example = "smartphone")
@@ -30,5 +32,8 @@ public class ProductResponse {
 
     @Schema(description = "Current page number", example = "1")
     private Integer page;
+
+    @Schema(description = "The stage that returned results", example = "exact")
+    private String stage;
 
 }
