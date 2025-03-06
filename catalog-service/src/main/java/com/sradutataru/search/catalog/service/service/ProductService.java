@@ -1,16 +1,17 @@
-package com.sradutataru.search.catalog.service;
+package com.sradutataru.search.catalog.service.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sradutataru.search.catalog.service.dto.ProductDto;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
-import com.sradutataru.search.catalog.service.service.SemanticService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.MultiMatchQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import static org.apache.http.util.TextUtils.isBlank;
 import static org.elasticsearch.client.RequestOptions.DEFAULT;
 
 @Service
@@ -37,9 +39,12 @@ public class ProductService {
 
     public ProductResponse keywordSearch(String query, Integer count, Integer page, Map<String, String> attributes) {
         List<ProductDto> products = new ArrayList<>();
-        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery()
-                .must(QueryBuilders.multiMatchQuery(query, "name", "description", "searchKeywords"));
-
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
+        if(query == null || isBlank(query)) {
+            boolQuery.must(QueryBuilders.matchAllQuery());
+        } else {
+            boolQuery.must(QueryBuilders.multiMatchQuery(query, "name", "description", "searchKeywords"));
+        }
         if (attributes != null && !attributes.isEmpty()) {
             attributes.forEach((attrKey, attrValue) ->
                     boolQuery.filter(QueryBuilders.termQuery(attrKey, attrValue))
@@ -127,7 +132,7 @@ public class ProductService {
         return new ArrayList<>(suggestions);
     }
 
-    private static BoolQueryBuilder getPrefixPhraseForField(String[] tokens, String field) {
+    static BoolQueryBuilder getPrefixPhraseForField(String[] tokens, String field) {
         BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
         if (tokens.length == 1) {
             boolQuery.should(QueryBuilders.prefixQuery(field, tokens[0]));

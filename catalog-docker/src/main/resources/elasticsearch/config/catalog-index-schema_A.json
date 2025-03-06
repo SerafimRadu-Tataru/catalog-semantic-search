@@ -3,6 +3,7 @@
     "catalog-index_live": {}
   },
   "settings": {
+    "refresh_interval": "30s",
     "analysis": {
       "tokenizer": {
         "edge_ngram_tokenizer": {

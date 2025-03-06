@@ -1,6 +1,6 @@
 package com.sradutataru.search.catalog.service.controller;
 
-import com.sradutataru.search.catalog.service.ProductService;
+import com.sradutataru.search.catalog.service.service.ProductService;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

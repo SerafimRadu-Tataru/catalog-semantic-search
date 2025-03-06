@@ -2,7 +2,6 @@ package com.sradutataru.search.catalog.service.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sradutataru.search.catalog.service.ProductService;
 import com.sradutataru.search.catalog.service.dto.ProductDto;
 import com.sradutataru.search.catalog.service.dto.ProductResponse;
 import com.sradutataru.search.catalog.service.dto.SemanticStage;
@@ -33,6 +32,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static com.sradutataru.search.catalog.service.dto.TagDto.MatchType.EXACT;
+import static com.sradutataru.search.catalog.service.dto.TagDto.MatchType.SPELLCHECK;
 import static com.sradutataru.search.catalog.service.dto.TagDto.MatchType.UNRECOGNISED;
 import static org.elasticsearch.client.RequestOptions.DEFAULT;
 
@@ -84,18 +85,22 @@ public class SemanticService {
     }
 
     private DisMaxQueryBuilder buildStageQuery(List<TagDto> recognizedTags, SemanticStage stage, Map<String, String> attributeFilters) {
-        Map<String, List<TagDto>> tagPerKeyword = recognizedTags.stream().collect(Collectors.toMap(TagDto::getTag, List::of, (t1, t2) -> {
+        Map<String, List<TagDto>> tagPerKeyword = recognizedTags.stream().collect(Collectors.toMap(tag->tag.getOriginalToken().toLowerCase(), List::of, (t1, t2) -> {
             List<TagDto> tags = new ArrayList<>();
             tags.addAll(t1);
             tags.addAll(t2);
             return tags;
         }));
-        DisMaxQueryBuilder boolQuery = QueryBuilders.disMaxQuery().tieBreaker(1);
+        DisMaxQueryBuilder boolQuery = QueryBuilders.disMaxQuery().tieBreaker(0.5f);
         float matchedTagsInStage = 0;
+        List<TagDto> unrecognizedTags = new ArrayList<>();
         for (Map.Entry<String, List<TagDto>> tag : tagPerKeyword.entrySet()) {
             DisMaxQueryBuilder innerDisMax = QueryBuilders.disMaxQuery().tieBreaker(0.2f);
             boolean matched = false;
             for(TagDto tagDto : tag.getValue()) {
+                if(tagDto.getMatchType().equals(UNRECOGNISED)) {
+                    unrecognizedTags.add(tagDto);
+                }
                 String fieldVariant = tagDto.getField();
                 if(!fieldVariant.startsWith("attribute")) {
                     fieldVariant += "." + tagDto.getType();
@@ -103,7 +108,11 @@ public class SemanticService {
                 float fieldBoostFromStage = getFieldBoostFromStage(stage, fieldVariant);
                 if (fieldBoostFromStage != -1) {
                     matched = true;
-                    innerDisMax.add(QueryBuilders.termQuery(fieldVariant, tagDto.getTag()).boost(fieldBoostFromStage));
+                    float boost = fieldBoostFromStage;
+                    if(tagDto.getMatchType().equals(SPELLCHECK)) {
+                        boost /= 2;
+                    }
+                    innerDisMax.add(QueryBuilders.termQuery(fieldVariant, tagDto.getTag()).boost(boost));
                 }
             }
             if(matched) {
@@ -119,6 +128,9 @@ public class SemanticService {
         }
         if(matchedTagsInStage / tagPerKeyword.keySet().size() < stage.getMinMatchPercent()) {
             return null;
+        }
+        if(!unrecognizedTags.isEmpty()) {
+            boolQuery.add(QueryBuilders.moreLikeThisQuery(stage.getFields().keySet().toArray(String[]::new), unrecognizedTags.stream().map(TagDto::getOriginalToken).toArray(String[]::new), null));
         }
         return boolQuery;
     }
@@ -140,26 +152,34 @@ public class SemanticService {
         String[] tokens = query.trim().split("\\s+");
 
         try {
-            BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery();
-            Arrays.stream(tokens).forEach(token -> queryBuilder.should(QueryBuilders.termQuery("tag", token)));
-            SearchSourceBuilder exactSource = new SearchSourceBuilder()
-                    .query(queryBuilder)
-                    .size(100)
-                    .highlighter(HIGHLIGHT_BUILDER);
-            SearchRequest exactRequest = new SearchRequest(TAGS_INDEX).source(exactSource);
-            SearchResponse exactResponse = client.search(exactRequest, RequestOptions.DEFAULT);
-            for (SearchHit hit : exactResponse.getHits().getHits()) {
-                TagDto tag = objectMapper.readValue(hit.getSourceAsString(), TagDto.class);
-                Map<String, HighlightField> highlights = hit.getHighlightFields();
-                if (highlights.containsKey("tag")) {
-                    removeMatchedKeywordsFromQuery(matchedTokens, tag, highlights);
-                } else {
-                    matchedTokens.add(tag.getTag().toLowerCase());
+            Arrays.stream(tokens).forEach(token -> {
+                try {
+                    BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery();
+                    queryBuilder.should(QueryBuilders.matchQuery("tag", token));
+                    SearchSourceBuilder exactSource = new SearchSourceBuilder()
+                            .query(queryBuilder)
+                            .size(100)
+                            .highlighter(HIGHLIGHT_BUILDER);
+                    SearchRequest exactRequest = new SearchRequest(TAGS_INDEX).source(exactSource);
+                    SearchResponse exactResponse = client.search(exactRequest, RequestOptions.DEFAULT);
+                    for (SearchHit hit : exactResponse.getHits().getHits()) {
+                        TagDto tag = objectMapper.readValue(hit.getSourceAsString(), TagDto.class);
+                        Map<String, HighlightField> highlights = hit.getHighlightFields();
+                        if (highlights.containsKey("tag")) {
+                            removeMatchedKeywordsFromQuery(matchedTokens, tag, highlights);
+                        } else {
+                            matchedTokens.add(tag.getTag().toLowerCase());
+                        }
+                        tag.setMatchType(EXACT);
+                        String matchedTag = tag.getTag().replaceAll("<em>", "").replaceAll("</em>", "");
+                        tag.setTag(matchedTag);
+                        tag.setOriginalToken(token);
+                        recognizedTags.add(tag);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                tag.setMatchType(TagDto.MatchType.EXACT);
-                tag.setTag(tag.getTag().replaceAll("<em>", "").replaceAll("</em>", ""));
-                recognizedTags.add(tag);
-            }
+            });
             SearchSourceBuilder phraseSource = new SearchSourceBuilder()
                     .query(QueryBuilders.matchPhraseQuery("tag", query))
                     .size(100)
@@ -172,10 +192,35 @@ public class SemanticService {
                 if (highlights.containsKey("tag")) {
                     removeMatchedKeywordsFromQuery(matchedTokens, tag, highlights);
                 }
-                tag.setMatchType(TagDto.MatchType.EXACT);
-                tag.setTag(tag.getTag().replaceAll("<em>", "").replaceAll("</em>", ""));
+                tag.setMatchType(EXACT);
+                String matchedTag = tag.getTag().replaceAll("<em>", "").replaceAll("</em>", "");
+                tag.setTag(matchedTag);
+                tag.setOriginalToken(matchedTag);
                 recognizedTags.add(tag);
             }
+            Arrays.stream(tokens).forEach(token -> {
+                try {
+                    BoolQueryBuilder fuzzyQueryBuilder = QueryBuilders.boolQuery();
+                    fuzzyQueryBuilder.must(QueryBuilders.matchQuery("tag", token).fuzziness("AUTO"));
+                    SearchSourceBuilder fuzzySource = new SearchSourceBuilder()
+                            .query(fuzzyQueryBuilder)
+                            .size(100)
+                            .highlighter(HIGHLIGHT_BUILDER);
+                    SearchRequest fuzzyRequest = new SearchRequest(TAGS_INDEX).source(fuzzySource);
+                    SearchResponse fuzzyResponse = client.search(fuzzyRequest, RequestOptions.DEFAULT);
+                    for (SearchHit hit : fuzzyResponse.getHits().getHits()) {
+                        TagDto tag = objectMapper.readValue(hit.getSourceAsString(), TagDto.class);
+                        Map<String, HighlightField> highlights = hit.getHighlightFields();
+                        tag.setMatchType(SPELLCHECK);
+                        tag.setTag(tag.getTag().replaceAll("<em>", "").replaceAll("</em>", ""));
+                        tag.setOriginalToken(token);
+                        matchedTokens.add(token.toLowerCase());
+                        recognizedTags.add(tag);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
         } catch (IOException e) {
             throw new RuntimeException("Failed to retrieve recognized tags", e);
         }
@@ -188,6 +233,7 @@ public class SemanticService {
                 tag.setSourceId(token.toLowerCase() + "_unrecognised");
                 tag.setWeight(1.0f);
                 tag.setMatchType(UNRECOGNISED);
+                tag.setOriginalToken(token);
                 recognizedTags.add(tag);
             }
         }

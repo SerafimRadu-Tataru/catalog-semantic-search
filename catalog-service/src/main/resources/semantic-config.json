@@ -9,7 +9,7 @@
         "category_name.concept": 20
       },
       "dynamic_fields": {
-        "attributes.*": 1.5
+        "attributes.*": 25
       },
       "minMatchPercent": 1.0
     },
@@ -17,16 +17,16 @@
       "name": "text match",
       "fields": {
         "name.concept": 25,
-        "name.text": 20,
-        "name.shingle": 18,
+        "name.text": 12,
+        "name.shingle": 10,
         "search_keywords.concept": 25,
-        "search_keywords.text": 20,
-        "search_keywords.shingle": 18,
+        "search_keywords.text": 12,
+        "search_keywords.shingle": 10,
         "brand_name.concept": 30,
         "category_name.concept": 20
-      },
+       },
       "dynamic_fields": {
-        "attributes.*": 15
+        "attributes.*": 25
       },
       "minMatchPercent": 1.0
     },
@@ -34,16 +34,16 @@
       "name": "partial match",
       "fields": {
         "name.concept": 25,
-        "name.text": 20,
-        "name.shingle": 18,
+        "name.text": 12,
+        "name.shingle": 10,
         "search_keywords.concept": 25,
-        "search_keywords.text": 20,
-        "search_keywords.shingle": 18,
+        "search_keywords.text": 12,
+        "search_keywords.shingle": 10,
         "brand_name.concept": 30,
         "category_name.concept": 20
       },
       "dynamic_fields": {
-        "attributes.*": 15
+        "attributes.*": 25
       },
       "minMatchPercent": 0.5
     }

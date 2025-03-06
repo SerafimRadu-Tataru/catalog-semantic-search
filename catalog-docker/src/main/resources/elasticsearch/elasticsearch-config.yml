@@ -5,3 +5,5 @@ path.logs: /usr/share/elasticsearch/logs
 network.host: 0.0.0.0
 http.port: 9200
 discovery.type: single-node
+thread_pool.search.size: 20
+thread_pool.write.size: 10

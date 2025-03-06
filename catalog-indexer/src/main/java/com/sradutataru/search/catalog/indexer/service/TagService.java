@@ -6,12 +6,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.functions;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -21,13 +19,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static java.lang.Boolean.TRUE;
-import static java.util.Arrays.asList;
 import static java.util.Objects.isNull;
 import static java.util.stream.Collectors.toMap;
-import static org.apache.spark.sql.Encoders.javaSerialization;
 
 @Component
 @RequiredArgsConstructor
@@ -153,7 +148,7 @@ public class TagService {
             return doc;
     }
 
-    private Map<String, Map<String, Boolean>> loadTagConfig() {
+    Map<String, Map<String, Boolean>> loadTagConfig() {
         try (InputStream is = TagService.class.getResourceAsStream("/tag-config.json")) {
             return new ObjectMapper().readValue(is, new TypeReference<>() {});
         } catch (Exception e) {
@@ -161,7 +156,7 @@ public class TagService {
         }
     }
 
-    private static String toSnake(String fieldName) {
+    static String toSnake(String fieldName) {
         return fieldName
                 .replaceAll("([A-Z])(?=[A-Z])", "$1_")
                 .replaceAll("([a-z])([A-Z])", "$1_$2")

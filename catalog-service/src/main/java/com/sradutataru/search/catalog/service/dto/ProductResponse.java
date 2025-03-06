@@ -5,12 +5,14 @@ import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Schema(description = "Response for product search containing query, products, count, and page information.")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductResponse {
